@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  VanMoof: https://www.vanmoof.com/nl-NL
+  Dille & Kamille: https://www.dille-kamille.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="images/fotoHomepagina.png" width="375px" alt="homepagina>
+  <img src="images/fotoHomepagina.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="images/fotoOntdekpagina.png" width="375px" alt="Ontdek pagina">
+  <img src="images/fotoDetailpagina.png" width="375px" alt="detailpagina">
  
 </details>
 
