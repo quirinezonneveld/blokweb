@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="images/fotoHomepagina.png" width="375px" alt="homepagina">
+  <img src="images/homepaginaGroot.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="images/fotoDetailpagina.png" width="375px" alt="detailpagina">
+  <img src="images/detailpaginGroot.png" width="375px" alt="detailpagina">
  
 </details>
 
@@ -68,7 +68,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="htmlStructuurHomepagina" width="375px" alt="html breakdown homepagina">
+  <img src="htmlStructuurDetailpagina" width="375px" alt="html breakdown detailpagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
