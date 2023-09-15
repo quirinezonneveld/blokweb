@@ -2,7 +2,9 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -16,7 +18,10 @@
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#FFFF;
+	--color-background-yellow: #faf8ed;
+	--color-background-green: #8B8462;
+	--font-main: "Gill Sans MT",sans-serif;
 }
 
 
@@ -27,5 +32,139 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+body {
+	/* overflow-x: hidden; */
+	font-family: var(--font-main);
+}
 
+/* h1 {
+	font-family: 'Courier New', Courier, monospace;
+} */
+
+/* navigatie */
+header ul {
+	display: flex;
+	background: red;
+}
+
+main section:first-of-type {
+	display: flex;
+	flex-direction: column;
+	height: 70vh;
+}
+main section:first-of-type section {
+	background-color: var(--color-background-green);
+}
+main section:first-of-type img {
+	width: 70vw;
+	/* align-items: center; */
+}
+
+/* categoriën */
+main section:nth-of-type(2) {
+	background: var(--color-background-yellow);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	/* align-items: center; */
+	justify-content: center;
+	/* width: 100vw; */
+}
+/* main section:nth-of-type(2) a article > * {
+	align-items: center;
+	justify-content: center;
+} */
+main section:nth-of-type(2) a {
+	background: var(--color-background);
+	padding: 1.25em 0.9375em;
+	text-decoration: none;
+}
+main section:nth-of-type(2) a img {
+	width: 8em;
+}
+main section:nth-of-type(2) a h3 {
+	color: var(--color-text);
+	border-bottom: solid var(--color-text) 0.1em;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	/* width: 6em; */
+}
+main section:nth-of-type(2) a h4 {
+	color: var(--color-text);
+	font-family: var(--font-main);
+}
+
+/* koken met krachtige kruiden */
+main section:nth-of-type(3) div {
+	display: flex;
+	overflow-x: auto;
+}
+main section:nth-of-type(3) div img {
+	width: 10em;	
+}
+main section:nth-of-type(3) img {
+	width: 100%;	
+}
+/* grid of met positon? */
+
+/* Tips & inspiratie */
+main section:nth-of-type(4) {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: var(--color-background-yellow);
+	gap: 2em;
+}
+main section:nth-of-type(4) article {
+	background: var(--color-background);
+}
+main section:nth-of-type(4) article > * {
+	width: 85vw;
+}
+main section:nth-of-type(4) article > h3, h4, p {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+main section:nth-of-type(4) article h3 {
+	padding-top: 1em;
+}
+main section:nth-of-type(4) article p {
+	padding-top: 0.8em;
+	padding-bottom: 1em;
+}
+
+/* instagram */
+main section:nth-of-type(5) {
+	background: var(--color-background);
+	padding: 5em 2em;
+}
+main section:nth-of-type(5) div {
+	display: flex;
+	overflow-x: auto;
+	gap: 1em;
+}
+main section:nth-of-type(5) div img {
+	width: 15em;
+}
+
+/* footer */
+/* wordt member van dille & kamille en ontvang */
+footer article {
+	background-color: var(--color-background-green);
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+}
+footer article img {
+	width: 100%;
+}
+footer article ul li {
+	list-style-type: none;
+}
+
+/* altijd in de buurt */
+footer section img {
+	width: 100%;
+}
+footer section p {
+	background-color: red;
+}

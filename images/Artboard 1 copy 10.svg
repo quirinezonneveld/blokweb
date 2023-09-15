@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1373.73 1373.73">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+    </style>
+    <symbol id="arrow-symbol" viewBox="0 0 614.4 1024">
+      <path class="cls-1" d="m29.26,994.74c-39.01-39.01-39.01-97.52,0-136.53l341.33-341.33L29.26,165.79C-9.75,126.78-9.75,68.27,29.26,29.26c39.01-39.01,97.52-39.01,136.53,0l419.35,409.6c19.5,19.5,29.26,39.01,29.26,68.27s-9.75,58.51-29.26,78.02l-409.6,409.6c-39.01,39.01-107.28,39.01-146.29,0h0Z"/>
+    </symbol>
+  </defs>
+  <use id="arrow-down" width="614.4" height="1024" transform="translate(379.66 1198.86) scale(1 -1)" xlink:href="#arrow-symbol"/>
+</svg>

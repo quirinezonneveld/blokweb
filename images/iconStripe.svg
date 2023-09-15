@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1373.73 1373.73">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+    </style>
+    <symbol id="minus-symbol" viewBox="0 0 1280 213.33">
+      <path class="cls-1" d="m1173.33,213.33H106.67C42.67,213.33,0,170.67,0,106.67S42.67,0,106.67,0h1066.67c64,0,106.67,42.67,106.67,106.67s-42.67,106.67-106.67,106.67Z"/>
+    </symbol>
+  </defs>
+  <use id="minus-white" width="1280" height="213.33" transform="translate(46.86 793.53) scale(1 -1)" xlink:href="#minus-symbol"/>
+</svg>

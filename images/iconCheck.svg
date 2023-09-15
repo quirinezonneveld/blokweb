@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1373.73 1373.73">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+    </style>
+    <symbol id="check-symbol" viewBox="0 0 1280 1013.33">
+      <path class="cls-3" d="m1226.67,960c-71.11,71.11-177.78,71.11-248.89,0L444.44,426.67l-142.22,142.22c-71.11,71.11-177.78,71.11-248.89,0h0c-71.11-71.11-71.11-177.78,0-248.89L320,53.33c71.11-71.11,177.78-71.11,248.89,0h0l657.78,657.78c71.11,71.11,71.11,177.78,0,248.89h0Z"/>
+    </symbol>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="119.69" y="233.12" width="1134.35" height="907.48"/>
+    </clipPath>
+  </defs>
+  <g class="cls-1">
+    <use id="check-greener" width="1280" height="1013.33" transform="translate(103.93 1120.12) scale(.89 -.89)" xlink:href="#check-symbol"/>
+  </g>
+</svg>

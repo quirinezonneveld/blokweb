@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1373.73 1373.73">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+    </style>
+    <symbol id="close-symbol" viewBox="0 0 1024 1024">
+      <polygon class="cls-1" points="1024 987.05 987.05 1024 512 548.95 36.95 1024 0 987.05 475.05 512 0 36.95 36.95 0 512 475.05 987.05 0 1024 36.95 548.95 512 1024 987.05"/>
+    </symbol>
+  </defs>
+  <use id="close-white" width="1024" height="1024" transform="translate(174.86 1198.86) scale(1 -1)" xlink:href="#close-symbol"/>
+</svg>

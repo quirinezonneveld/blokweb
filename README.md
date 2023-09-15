@@ -68,8 +68,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="htmlStructuurHomepagina" width="375px" alt="html breakdown homepagina">
-  <img src="htmlStructuurDetailpagina" width="375px" alt="html breakdown detailpagina">
+  <img src="images/htmlStructuurHomepagina.png" width="375px" alt="html breakdown homepagina">
+  <img src="images/htmlStructuurDetailpagina.png" width="375px" alt="html breakdown detailpagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -91,6 +91,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  vragen:
+  1. bij sommige delen twijl ik of het een section / div / div in bovenste section / article is?
+  2. hoe schrijf ik een ' in een p?
+  3. geef ik de goede h aan de elementen?
+  4. dropdown
+  5. Bij de arrow button, heb ik een img in de button gedaan. Het laat de img echter niet zien, hoe kan dit?
+  6. Detailpagina: zijn het twee losse ul?
+  7. Wanneer gebruik ik grid en wanneer flexbox?
+  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
