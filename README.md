@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   5. Bij de arrow button, heb ik een img in de button gedaan. Het laat de img echter niet zien, hoe kan dit?
   6. Detailpagina: zijn het twee losse ul?
   7. Wanneer gebruik ik grid en wanneer flexbox?
-  
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -132,6 +132,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  vragen:
+  -Koken met krachtige kruiden: image heb ik geplaatst met top: … , kan dit ook op een andere manier (als ik nu content erboven plaats klopt de plaatsing dan niet meer.
+  - Benaming :root
+  - Errors in html
+  - Section in een section -> homepage h1??
+  - wanneer ik 4e section selecteert, selecteert het ook andere elementen, hoe kan dit?
+
 
 
   ### Agenda voor meeting

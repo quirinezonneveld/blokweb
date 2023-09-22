@@ -1,6 +1,7 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+
 *, *::after, *::before {
   box-sizing: border-box;  
   margin: 0;
@@ -11,17 +12,24 @@
 
 
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
-	/* startje */
-	--color-text:#111;
+	--color-text: black;
+
 	--color-background:#FFFF;
 	--color-background-yellow: #faf8ed;
 	--color-background-green: #8B8462;
+
 	--font-main: "Gill Sans MT",sans-serif;
+	--font-headers: 'Courier New', Courier, monospace;
+
+	--button-background: black;
+	--button-text-color: white;
+	--button-font-size: 1.2em;
+	--button-padding: 0.7em 1em 0.7em 1em;
 }
 
 
@@ -33,32 +41,61 @@
 /****************/
 
 body {
-	/* overflow-x: hidden; */
 	font-family: var(--font-main);
 }
 
-/* h1 {
-	font-family: 'Courier New', Courier, monospace;
-} */
+h1 {
+	font-family: var(--font-headers);
+	font-size: 2em;
+}
+
+h2 {
+	font-family: var(--font-headers);
+}
 
 /* navigatie */
-header ul {
+/* header ul {
 	display: flex;
 	background: red;
-}
+} */
 
-main section:first-of-type {
+/* nth-of-type overal */
+main section:nth-of-type(1) {
 	display: flex;
 	flex-direction: column;
-	height: 70vh;
+	height: 50vh;
 }
-main section:first-of-type section {
+main section:nth-of-type(1) section {
 	background-color: var(--color-background-green);
+	padding-left: 1.5em;
 }
-main section:first-of-type img {
-	width: 70vw;
-	/* align-items: center; */
+main section:nth-of-type(1) img {
+	width: 20.6em;
+	position: absolute;
+	top: 10em;
+	transform: translate(7%);
+	/* img centreren */
 }
+/* transform: translate():
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+
+main section:nth-of-type(1) a {
+	background-color: var(--button-background);
+	color: var(--button-text-color);
+	font-family: var(--font-headers);
+	padding: var(--button-padding);
+	width: fit-content;
+	text-decoration: none;
+	font-size: var(--button-font-size);
+}
+main section:nth-child(1) p {
+	width: fit-content;
+	padding: 0;
+}
+
+/************/
+/* homepage */
+/************/
 
 /* categoriën */
 main section:nth-of-type(2) {
@@ -66,46 +103,121 @@ main section:nth-of-type(2) {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
-	/* align-items: center; */
 	justify-content: center;
-	/* width: 100vw; */
+	padding-top: 3.5em;
+	padding-bottom: 3.2em;
 }
-/* main section:nth-of-type(2) a article > * {
-	align-items: center;
-	justify-content: center;
-} */
 main section:nth-of-type(2) a {
 	background: var(--color-background);
 	padding: 1.25em 0.9375em;
 	text-decoration: none;
+	width: 9.8em;
+}
+main section:nth-of-type(2) a > * {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 main section:nth-of-type(2) a img {
 	width: 8em;
 }
 main section:nth-of-type(2) a h3 {
+	font-family: var(--font-headers);
 	color: var(--color-text);
 	border-bottom: solid var(--color-text) 0.1em;
 	padding-bottom: 0.5em;
 	margin-bottom: 0.5em;
-	/* width: 6em; */
 }
 main section:nth-of-type(2) a h4 {
 	color: var(--color-text);
 	font-family: var(--font-main);
+	font-weight: 500;
 }
 
+
+
+
+
+
 /* koken met krachtige kruiden */
-main section:nth-of-type(3) div {
+main section:nth-of-type(3) {
+	padding-bottom: 20em;
+}
+main section:nth-of-type(3) div:nth-of-type(1) {
+	display: grid;
+	grid-template-columns: 0.5em 8fr 1fr 1fr 0.5em;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 0.5em;
+	background: var(--color-background-yellow);
+}
+main section:nth-of-type(3) p:first-child {
+	font-weight: 800;
+	padding: 0;
+	grid-column-start: 2;
+	align-self: end;
+}
+main section:nth-of-type(3) h2 {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+main section:nth-of-type(3) button {
+	align-self: end;
+	border: none;
+	background-color: transparent;
+}
+main section:nth-of-type(3) button:first-of-type {
+	grid-column-start: 3;
+	grid-row-start: 2;
+	transform: scaleX(-1);
+}
+main section:nth-of-type(3) button:last-of-type {
+	grid-column-start: 4;
+	grid-row-start: 2;
+}
+/* flip an image: 
+https://css-tricks.com/snippets/css/flip-an-image/ */
+
+
+main section:nth-of-type(3) div:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
 }
-main section:nth-of-type(3) div img {
+main section:nth-of-type(3) div:nth-of-type(2) img {
 	width: 10em;	
 }
-main section:nth-of-type(3) img {
-	width: 100%;	
+
+main section:nth-of-type(3) img:nth-child(3) {
+	position: absolute;
+	width: 100%;
+	top: 70em;
+	z-index: -1;
 }
-/* grid of met positon? */
+
+main section:nth-of-type(3) div:nth-of-type(2) {
+	gap: 1em;
+}
+main section:nth-of-type(3) div:nth-of-type(2) a {
+	background-color: white;
+	text-decoration: none;
+}
+main section:nth-of-type(3) div:nth-of-type(2) a article h3 {
+	font-family: var(--font-main);
+	font-size: 0.8em;
+	font-weight: 500;
+	color: var(--color-text);
+	padding: 1em 1em 1em 1em;
+}
+main section:nth-of-type(3) div:nth-of-type(2) a article p {
+	font-size: 0.8em;
+	font-weight: 800;
+	color: var(--color-text);
+	padding: 1em 1em 0 1em;
+}
+
+
+
+
 
 /* Tips & inspiratie */
 main section:nth-of-type(4) {
@@ -121,7 +233,7 @@ main section:nth-of-type(4) article {
 main section:nth-of-type(4) article > * {
 	width: 85vw;
 }
-main section:nth-of-type(4) article > h3, h4, p {
+main section:nth-of-type(4) article > h3, main section:nth-of-type(4) article > h4, main section:nth-of-type(4) article > p {
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -132,6 +244,10 @@ main section:nth-of-type(4) article p {
 	padding-top: 0.8em;
 	padding-bottom: 1em;
 }
+
+
+
+
 
 /* instagram */
 main section:nth-of-type(5) {
@@ -146,6 +262,10 @@ main section:nth-of-type(5) div {
 main section:nth-of-type(5) div img {
 	width: 15em;
 }
+
+
+
+
 
 /* footer */
 /* wordt member van dille & kamille en ontvang */
@@ -165,6 +285,13 @@ footer article ul li {
 footer section img {
 	width: 100%;
 }
-footer section p {
+/* footer section p {
 	background-color: red;
-}
+} */
+
+
+
+
+/****************/
+/* theepot page */
+/****************/
