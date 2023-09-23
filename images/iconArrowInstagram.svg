@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 624.15 1033.75">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+    </style>
+    <symbol id="arrow-symbol" viewBox="0 0 614.4 1024.01">
+      <path class="cls-3" d="m29.26,29.27c-39.01,39.01-39.01,97.52,0,136.53l341.33,341.33L29.26,858.22c-39.01,39.01-39.01,97.52,0,136.53,39.01,39.01,97.52,39.01,136.53,0l419.35-409.6c19.5-19.5,29.26-39.01,29.26-68.27s-9.75-58.51-29.26-78.02L175.54,29.26c-39.01-39.01-107.28-39.01-146.29,0h0Z"/>
+    </symbol>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="9.75" width="614.4" height="1024"/>
+    </clipPath>
+  </defs>
+  <g class="cls-1">
+    <use id="arrow-down" width="614.4" height="1024.01" transform="translate(0 9.74)" xlink:href="#arrow-symbol"/>
+  </g>
+</svg>
