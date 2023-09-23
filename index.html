@@ -14,25 +14,49 @@
 
 <body>
 	<header>
-		<!-- <ul>
-			<li><img src="images/logo.svg" alt=Logo></li>
+		<div>
+			<img src="images/iconCheck2.svg" alt="Check icon">
+			<p>Vandaag besteld, maandag in huis</p>
+		</div>
+		<ul>
+			<li>
+				<img src="images/hamburgermenu2.png" alt="Hamburger menu">
+			</li>
 			<li>
 				<a href="klantLogin.html">
-					<img src="images/klantLogin.png" alt="Klant login">
+					<img src="images/iconProfiel.png" alt="Klant login">
+				</a>
+			</li>
+			<li>
+				<a href="index.html">
+					<img src="images/logo.svg" alt=Logo>
 				</a>
 			</li>
 			<li>
 				<a href="mijnVerlanglijst.html">
-					<img src="images/mijnVerlanglijst.png" alt="Mijn verlanglijst">
+					<img src="images/iconFavorieten.png" alt="Mijn verlanglijst">
 				</a>
 			</li>
 			<li>
 				<a href="winkelmandje.html">
-					<img src="images/winkelmandje.png" alt="Winkelmandje">
+					<img src="images/iconWinkelmandje2.png" alt="Winkelmandje">
 				</a>
 			</li>
 		</ul>
 
+		<input
+		type="search"
+		name="q"
+		placeholder="Search the site…" 
+		maxlength="30"
+		aria-label="Search through site content"
+		/>
+		
+    	<button>Search</button>
+		<!-- <input type="search”>:
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search  -->
+
+		<!-- 
 		<p>searchbar</p> -->
 
 		<!-- <nav>
@@ -50,46 +74,42 @@
 				<li><a href="recepten.html">Recepten</a></li>
 			</ul>
 		</nav> -->
+		<div>
+			<p>Wijsheden uit de natuur</p>
+			<h1>Herfst bij Dille</h1>
+			<a href="herfst.html">Bekijk hier</a>
+		</div>
+		<img src="images/theerituelen.jpg" alt="Theerituelen">
 	</header>
 
 	<main>
-		<section>
-			<section>
-				<p>Wijsheden uit de natuur</p>
-				<h1>Herfst bij Dille</h1>
-				<a href="herfst.html">Bekijk hier</a>
-			</section>
-			<img src="images/theerituelen.jpg" alt="Theerituelen">
-		</section>
-
-		<!-- section / div / div in bovenste section? -->
 		<section>
 				<a href="rietenManden.html">
 					<article>
 						<img src="images/rietenManden.jpg" alt="Rieten manden">
 						<h3>Rieten manden</h3>
-						<h4>Bekijk hier</h4>
+						<p>Bekijk hier</p>
 					</article>
 				</a>
 				<a href="badEnDouche.html">
 					<article>
 						<img src="images/badEnDouche.jpg" alt="Bad & douche">
 						<h3>Bad & douche</h3>
-						<h4>Bekijk hier</h4>
+						<p>Bekijk hier</p>
 					</article>
 				</a>
 				<a href="tafelkleden.html">
 					<article>
 						<img src="images/Tafelkleden.jpg" alt="Tafelkleden">
 						<h3>Tafelkleden</h3>
-						<h4>Bekijk hier</h4>
+						<p>Bekijk hier</p>
 					</article>
 				</a>
 				<a href="thee.html">
 					<article>
 						<img src="images/thee.jpg" alt="Thee">
 						<h3>Thee</h3>
-						<h4>Bekijk hier</h4>
+						<p>Bekijk hier</p>
 					</article>
 				</a>
 		</section>
@@ -149,13 +169,15 @@
 		</section>
 
 		<section>
-			<h2>Tips & inspiratie</h2>
-			<a href="tipsEnInspiratie">Bekijk meer</a>
+			<div>
+				<h2>Tips & inspiratie</h2>
+				<a href="tipsEnInspiratie">Bekijk alles</a>
+			</div>
 			<article>
 				<img src="images/theeElkMoment.jpg" alt="Een thee voor elk moment van de dag">
 				<h3>Thuis bij Dille</h3>
 				<h4>Een thee voor elk moment van de dag</h4>
-				<p>Bij Dille & Kamille vind je heel veel soorten thee, voor elk moment van je dag. Hieronder tippen wij onze favoriete thee, van ’s ochtends vroeg tot ’s avonds laat. </p>
+				<p>Bij Dille & Kamille vind je heel veel soorten thee, voor elk moment van je dag. Hieronder tippen wij onze favoriete thee, van &rsquo;s ochtends vroeg tot &rsquo;s avonds laat. </p>
 			</article>
 			<article>
 				<img src="images/madeleines.jpg" alt="Een thee voor elk moment van de dag">
@@ -172,20 +194,43 @@
 		</section>
 
 		<section>
-			<!-- h3? -->
 			<h3>Instagram</h3>
 			<p>Een kijkje bij jou in huis #dillekamille</p>
-			<div>
-				<img src="images/instagramTas.webp" alt="Instagram tas">
-				<img src="images/instagramEetbord.webp" alt="Instagram eetbord">
-				<img src="images/instagramCitroenSet.webp" alt="Instagram Citroenset">
-				<img src="images/instagramInpakpapier.webp" alt="Instagram inpakpapier">
-				<img src="images/instagramBoeket.webp" alt="Instagram boeket">
-				<img src="images/instagramOntbijt.webp" alt="Instagram ontbijt">
-				<img src="images/instagramBloemenset.webp" alt="Instagram bloemenset">
-				<img src="images/InstagramKaarshuisjes.webp" alt="Instagram kaarshuisjes">
-				<img src="images/instagramGroenten.webp" alt="Instagram groenten">
-			</div>
+			<ul>
+				<li>
+					<img src="images/instagramTas.webp" alt="Instagram tas">
+				</li>
+				<li>
+					<img src="images/instagramEetbord.webp" alt="Instagram eetbord">
+				</li>
+				<li>
+					<img src="images/instagramCitroenSet.webp" alt="Instagram Citroenset">
+				</li>
+				<li>
+					<img src="images/instagramInpakpapier.webp" alt="Instagram inpakpapier">
+				</li>
+				<li>
+					<img src="images/instagramBoeket.webp" alt="Instagram boeket">
+				</li>
+				<li>
+					<img src="images/instagramOntbijt.webp" alt="Instagram ontbijt">
+				</li>
+				<li>
+					<img src="images/instagramBloemenset.webp" alt="Instagram bloemenset">
+				</li>
+				<li>
+					<img src="images/InstagramKaarshuisjes.webp" alt="Instagram kaarshuisjes">
+				</li>
+				<li>
+					<img src="images/instagramGroenten.webp" alt="Instagram groenten">
+				</li>
+			</ul>
+			<button>
+				<img src="images/iconArrowInstagram.gif" alt="Arrow">
+			</button>
+			<button>
+				<img src="images/iconArrowInstagram.gif" alt="Arrow">
+			</button>
 		</section>
 
 	</main>
@@ -193,7 +238,7 @@
 	<footer>
 		<article>
 			<img src="images/memberBoeket.webp" alt="Bloemenboeket">
-			<!-- h2? -->
+
 			<h2>Word member van Dille & Kamille en ontvang:</h2>
 			<ul>
 				<li>Voorrang op ons seizoensassortiment</li>
@@ -204,32 +249,41 @@
 			<button>Schrijf je in</button>
 		</article>
 
-		<!-- section of article -->
 		<section>
 			<img src="images/dilleKamilleWinkel.jpg" alt="Dille & Kamille winkel">
 
-			<p>Altijd in de buurt</p>
-			<a href="winkels.html">Bekijk alle 45 winkels</a>
-
-			<!-- h2? -->
+			<div>
+				<p>Altijd in de buurt</p>
+				<a href="winkels.html">Bekijk alle 45 winkels</a>
+			</div>
+		</section>
+			
+		<section>
 			<h2>Klantenservice</h2>
 			<p>Voor vragen, tips of hulp kun je contact opnemen met onze klantenservice. Of bekijk hier het antwoord op de <a href="meestgesteldeVragen.html">meestgestelde vragen</a>.</p>
 
-			<img src="#" alt="Mail icon">
-			<address>
-				<a href="mailto:klantenservice@dille-kamille.com">klantenservice@dille-kamille.com</a>
-			</address>
+			<div>
+				<img src="images/iconMail.png" alt="Mail icon">
+				<address>
+					<a href="mailto:klantenservice@dille-kamille.com">klantenservice@dille-kamille.com</a>
+				</address>
+			</div>
+
 
 			<a href="klantenservice.html">Online klantenservice</a>
-
-
 		</section>
 
 		<section>
-			<img src="images/logo.svg" alt="Logo Dille & Kamille">
-			<p>Beoordeling 4.64 van 5 door 10731 klanten</p>
+			<div>
+				<img src="images/logo.svg" alt="Logo Dille & Kamille">
+				<p>Beoordeling 4.64 van 5 door 10731 klanten</p>
+			</div>
 
 			<p>Alle genoemde prijzen zijn consumentenprijzen en incclusief BTW.</p>
+			
+			<button>Service</button>
+			<button>Over ons</button>
+			<button>Inspiratie</button>
 
 			<!-- ??? -->
 			<label for="lang">NL</label>
@@ -243,7 +297,49 @@
 				<option value="English">English</option>
 			</select>
 
+			<ul>
+				<li>
+					<img src="images/iconInstagram.png" alt="Instagram icon">
+				</li>
+				<li>
+					<img src="images/iconPinterest.png" alt="Pinterest icon">
+				</li>
+				<li>
+					<img src="images/iconFacebook.png" alt="Facebook icon">
+				</li>
+				<li>
+					<img src="images/iconLinkedin.png" alt="Linkedin icon">
+				</li>
+			</ul>
 
+			<ul>
+				<li>
+					<a href="privacyVerklaring.html">Privacyverklaring</a>
+				</li>
+				<li>
+					<a href="disclaimer.html">Disclaimer</a>
+				</li>
+				<li>
+					<a href="copyright.html">Copyright</a>
+				</li>
+				<li>
+					<a href="algemeneVoorwaarden.html">Algemene voorwaarden</a>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<img src="images/certifiedCorporation.png" alt="Certified Corporation">
+				</li>
+				<li>
+					<img src="images/thuiswinkelWaarborg.png" alt="Thuiswinkel Waarborg">
+				</li>
+				<li>
+					<img src="images/trustedShops.png" alt="Trusted shops">
+				</li>
+			</ul>
+
+			<span>© 2023 Dille & Kamille (Nederland) B.V.</span>
 
 		</section>
 	</footer>

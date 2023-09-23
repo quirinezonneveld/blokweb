@@ -18,10 +18,13 @@
 
 :root {
 	--color-text: black;
+	--color-text2: white;
 
 	--color-background:#FFFF;
-	--color-background-yellow: #faf8ed;
-	--color-background-green: #8B8462;
+	--color-background2: #faf8ed;
+	--color-background3: #8B8462;
+	--color-background4: #606e5a;
+	--color-background5: #E0E5D7;
 
 	--font-main: "Gill Sans MT",sans-serif;
 	--font-headers: 'Courier New', Courier, monospace;
@@ -53,33 +56,73 @@ h2 {
 	font-family: var(--font-headers);
 }
 
-/* navigatie */
-/* header ul {
-	display: flex;
-	background: red;
+/* navigatie melding*/
+header div:first-of-type {
+	display: grid;
+	grid-template-columns: 4.5em 1em 0.5em 1fr;
+	background-color: var(--button-background);
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+header div:first-of-type img {
+	grid-column-start: 2;
+	scale: 0.6;
+}
+header div:first-of-type p {
+	grid-column-start: 4;
+	font-size: 0.8em;
+	color: var(--color-text2);
+	font-weight: 300;
+	/* animation: verschijn 2s ease; */
+}
+/* @keyframes verschijn {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
 } */
 
-/* nth-of-type overal */
-main section:nth-of-type(1) {
+/* navigatie */
+header ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+}
+header ul li img {
+	width: 1.7em;
+	height: 1.7em;
+}
+header ul li:nth-of-type(3) img {
+	width: 5em;
+	height: 5em;
+	margin-right: 1.5em;
+	margin-left: 1.5em;
+}
+
+/* zoekbalk */
+
+
+
+
+/* header */
+header div:last-of-type {
 	display: flex;
 	flex-direction: column;
-	height: 50vh;
-}
-main section:nth-of-type(1) section {
-	background-color: var(--color-background-green);
+	height: 55vh;
+	background-color: var(--color-background3);
+	padding-top: 3em;
 	padding-left: 1.5em;
 }
-main section:nth-of-type(1) img {
+header > img:last-child {
 	width: 20.6em;
 	position: absolute;
-	top: 10em;
-	transform: translate(7%);
-	/* img centreren */
+	/* transform: translateY(-11em); */
+	transform: translate(1.5em, -11em);
 }
 /* transform: translate():
 https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
 
-main section:nth-of-type(1) a {
+header div a {
 	background-color: var(--button-background);
 	color: var(--button-text-color);
 	font-family: var(--font-headers);
@@ -88,9 +131,10 @@ main section:nth-of-type(1) a {
 	text-decoration: none;
 	font-size: var(--button-font-size);
 }
-main section:nth-child(1) p {
+header div p {
 	width: fit-content;
 	padding: 0;
+	font-weight: 600;
 }
 
 /************/
@@ -98,8 +142,8 @@ main section:nth-child(1) p {
 /************/
 
 /* categoriën */
-main section:nth-of-type(2) {
-	background: var(--color-background-yellow);
+main section:nth-of-type(1) {
+	background: var(--color-background2);
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
@@ -107,32 +151,26 @@ main section:nth-of-type(2) {
 	padding-top: 3.5em;
 	padding-bottom: 3.2em;
 }
-main section:nth-of-type(2) a {
+main section:nth-of-type(1) a {
 	background: var(--color-background);
 	padding: 1.25em 0.9375em;
 	text-decoration: none;
 	width: 9.8em;
+	text-align: center;
 }
-main section:nth-of-type(2) a > * {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-main section:nth-of-type(2) a img {
+main section:nth-of-type(1) a img {
 	width: 8em;
 }
-main section:nth-of-type(2) a h3 {
+main section:nth-of-type(1) a h3 {
 	font-family: var(--font-headers);
 	color: var(--color-text);
 	border-bottom: solid var(--color-text) 0.1em;
 	padding-bottom: 0.5em;
 	margin-bottom: 0.5em;
 }
-main section:nth-of-type(2) a h4 {
+main section:nth-of-type(1) a p {
 	color: var(--color-text);
 	font-family: var(--font-main);
-	font-weight: 500;
 }
 
 
@@ -141,37 +179,37 @@ main section:nth-of-type(2) a h4 {
 
 
 /* koken met krachtige kruiden */
-main section:nth-of-type(3) {
+main section:nth-of-type(2) {
 	padding-bottom: 20em;
 }
-main section:nth-of-type(3) div:nth-of-type(1) {
+main section:nth-of-type(2) div:nth-of-type(1) {
 	display: grid;
 	grid-template-columns: 0.5em 8fr 1fr 1fr 0.5em;
 	grid-template-rows: 1fr 1fr;
 	grid-gap: 0.5em;
-	background: var(--color-background-yellow);
+	background: var(--color-background2);
 }
-main section:nth-of-type(3) p:first-child {
+main section:nth-of-type(2) p:first-child {
 	font-weight: 800;
 	padding: 0;
 	grid-column-start: 2;
 	align-self: end;
 }
-main section:nth-of-type(3) h2 {
+main section:nth-of-type(2) h2 {
 	grid-column-start: 2;
 	grid-row-start: 2;
 }
-main section:nth-of-type(3) button {
+main section:nth-of-type(2) button {
 	align-self: end;
 	border: none;
 	background-color: transparent;
 }
-main section:nth-of-type(3) button:first-of-type {
+main section:nth-of-type(2) button:first-of-type {
 	grid-column-start: 3;
 	grid-row-start: 2;
 	transform: scaleX(-1);
 }
-main section:nth-of-type(3) button:last-of-type {
+main section:nth-of-type(2) button:last-of-type {
 	grid-column-start: 4;
 	grid-row-start: 2;
 }
@@ -179,36 +217,38 @@ main section:nth-of-type(3) button:last-of-type {
 https://css-tricks.com/snippets/css/flip-an-image/ */
 
 
-main section:nth-of-type(3) div:nth-of-type(2) {
+main section:nth-of-type(2) div:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
+	/* background-color: var(--color-background2); */
+	
 }
-main section:nth-of-type(3) div:nth-of-type(2) img {
+main section:nth-of-type(2) div:nth-of-type(2) img {
 	width: 10em;	
 }
 
-main section:nth-of-type(3) img:nth-child(3) {
+main section:nth-of-type(2) img:nth-child(3) {
 	position: absolute;
 	width: 100%;
-	top: 70em;
+	transform: translateY(-10em);
 	z-index: -1;
 }
 
-main section:nth-of-type(3) div:nth-of-type(2) {
+main section:nth-of-type(2) div:nth-of-type(2) {
 	gap: 1em;
 }
-main section:nth-of-type(3) div:nth-of-type(2) a {
-	background-color: white;
+main section:nth-of-type(2) div:nth-of-type(2) a {
+	background-color: var(--color-background);
 	text-decoration: none;
 }
-main section:nth-of-type(3) div:nth-of-type(2) a article h3 {
+main section:nth-of-type(2) div:nth-of-type(2) a article h3 {
 	font-family: var(--font-main);
 	font-size: 0.8em;
 	font-weight: 500;
 	color: var(--color-text);
 	padding: 1em 1em 1em 1em;
 }
-main section:nth-of-type(3) div:nth-of-type(2) a article p {
+main section:nth-of-type(2) div:nth-of-type(2) a article p {
 	font-size: 0.8em;
 	font-weight: 800;
 	color: var(--color-text);
@@ -220,29 +260,57 @@ main section:nth-of-type(3) div:nth-of-type(2) a article p {
 
 
 /* Tips & inspiratie */
-main section:nth-of-type(4) {
+main section:nth-of-type(3) {
+	background: var(--color-background2);
+	padding-top: 4em;
+}
+main section:nth-of-type(3) div {
+	display: grid;
+	grid-template-columns: 1em 1fr 7em 1em;
+	grid-template-rows: 3fr 1fr;
+}
+main section:nth-of-type(3) h2 {
+	font-size: 2em;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+main section:nth-of-type(3) a {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	justify-self: end;
+	color: var(--color-text);
+}
+
+
+
+main section:nth-of-type(3) {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	background: var(--color-background-yellow);
 	gap: 2em;
 }
-main section:nth-of-type(4) article {
+main section:nth-of-type(3) article {
 	background: var(--color-background);
 }
-main section:nth-of-type(4) article > * {
+main section:nth-of-type(3) article > * {
 	width: 85vw;
 }
-main section:nth-of-type(4) article > h3, main section:nth-of-type(4) article > h4, main section:nth-of-type(4) article > p {
+main section:nth-of-type(3) article > h3, main section:nth-of-type(3) article > h4, main section:nth-of-type(3) article > p {
 	padding-left: 1em;
 	padding-right: 1em;
 }
-main section:nth-of-type(4) article h3 {
+main section:nth-of-type(3) article h3 {
 	padding-top: 1em;
 }
-main section:nth-of-type(4) article p {
+main section:nth-of-type(3) article h4 {
+	font-family: var(--font-headers);
+	font-size: 1.4em;
+	font-weight: 500;
+}
+main section:nth-of-type(3) article p {
 	padding-top: 0.8em;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 }
 
 
@@ -250,18 +318,37 @@ main section:nth-of-type(4) article p {
 
 
 /* instagram */
-main section:nth-of-type(5) {
+main section:nth-of-type(4) {
 	background: var(--color-background);
 	padding: 5em 2em;
 }
-main section:nth-of-type(5) div {
+main section:nth-of-type(4) p {
+	font-family: var(--font-headers);
+	font-weight: 700;
+	font-size: 2em;
+}
+main section:nth-of-type(4) ul {
 	display: flex;
 	overflow-x: auto;
 	gap: 1em;
+	list-style-type: none;
 }
-main section:nth-of-type(5) div img {
+main section:nth-of-type(4) ul li img {
 	width: 15em;
 }
+main section:nth-of-type(4) button {
+	border: none;
+	background-color: rgb(197, 197, 197);
+	border-radius: 100%;
+}
+main section:nth-of-type(4) button img {
+	width: 3em;
+	height: 3em;
+}
+main section:nth-of-type(4) button:first-of-type {
+	transform: scaleX(-1);
+}
+
 
 
 
@@ -270,25 +357,132 @@ main section:nth-of-type(5) div img {
 /* footer */
 /* wordt member van dille & kamille en ontvang */
 footer article {
-	background-color: var(--color-background-green);
+	background-color: var(--color-background5);
 	margin-left: 1.5em;
 	margin-right: 1.5em;
+	margin-bottom: 5em;
+	/* padding: 2.5em 1.25em 2.5em 1.25em; */
 }
+
+
 footer article img {
 	width: 100%;
 }
 footer article ul li {
-	list-style-type: none;
+	list-style-type: "-";
 }
+/* list-style-type
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
+
+footer article button {
+	background-color: var(--button-background);
+    color: var(--button-text-color);
+    font-family: var(--font-headers);
+    padding: var(--button-padding);
+    width: fit-content;
+    text-decoration: none;
+    font-size: var(--button-font-size);
+}
+
+
+
+
 
 /* altijd in de buurt */
-footer section img {
+footer section:first-of-type {
+	background-color: var(--color-background4);
+	color: var(--color-text2);
+}
+footer section:first-of-type img {
 	width: 100%;
 }
-/* footer section p {
-	background-color: red;
-} */
+footer section:first-of-type div {
+	background-color: var(--button-background);
+	width: fit-content;
+	color: var(--button-text-color);
+	padding: 2em;
+	font-family: var(--font-headers);
+	transform: translateY(-3.5em);
+}
+footer section:first-of-type div p {
+	font-size: var(--button-font-size);
+}
+footer section:first-of-type div a {
+	color: var(--button-text-color);
+	font-family: var(--font-main);
+}
 
+
+
+/* klantenservice */
+footer section:nth-of-type(2) {
+	background-color: var(--color-background4);
+	display: grid;
+	color: var(--color-text2);
+	gap: 2em;
+	padding: 1em 0em 6em 1em;
+}
+footer section:nth-of-type(2) div {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+}
+footer section:nth-of-type(2) div img {
+	height: 1.6em;
+}
+footer section:nth-of-type(2) a {
+	color: var(--color-text2);
+}
+
+/* gegevens */
+footer section:nth-of-type(3) {
+	padding: 5em 1em 3em 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+footer section:nth-of-type(3) div {
+	display: flex;
+	gap: 2.5em;
+	align-items: center;
+}
+footer section:nth-of-type(3) img {
+	width: 7em;
+}
+
+footer section:nth-of-type(3) ul:first-of-type {
+	list-style-type: none;
+	display: flex;
+	gap: 1.5em;
+}
+footer section:nth-of-type(3) ul:first-of-type li img {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+footer section:nth-of-type(3) ul:nth-of-type(2) {
+	list-style-type: none;
+}
+footer section:nth-of-type(3) ul:nth-of-type(2) li a {
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+footer section:nth-of-type(3) ul:nth-of-type(3) {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	gap: 1em;
+
+	border-top: solid lightgrey 0.1em;
+}
+footer section:nth-of-type(3) ul:nth-of-type(3) li img {
+	width: 5em;
+}
+
+footer section:nth-of-type(3) span {
+	text-align: center;
+}
 
 
 
