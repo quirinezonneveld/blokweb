@@ -20,7 +20,7 @@
 	--color-text: black;
 	--color-text2: white;
 
-	--color-background:#FFFF;
+	--color-background: #FFFF;
 	--color-background2: #faf8ed;
 	--color-background3: #8B8462;
 	--color-background4: #606e5a;
@@ -242,35 +242,39 @@ https://css-tricks.com/snippets/css/flip-an-image/ */
 
 
 
-main section:nth-of-type(2) div:nth-of-type(2) {
+main section:nth-of-type(2) ul {
 	display: flex;
 	overflow-x: auto;
 	background-color: var(--color-background2);
 	scroll-behavior: smooth;
 	gap: 1em;
 }
-main section:nth-of-type(2) div:nth-of-type(2)::-webkit-scrollbar {
+main section:nth-of-type(2) ul::-webkit-scrollbar {
 	display: none;
 }
 
 
-main section:nth-of-type(2) div:nth-of-type(2) a {
+main section:nth-of-type(2) ul li {
 	background-color: var(--color-background);
-	text-decoration: none;
 	/* transform: translateX(-4em); */
+	list-style-type: none;
+	position: relative;
 	z-index: 2;
 }
-main section:nth-of-type(2) div:nth-of-type(2) img {
+main section:nth-of-type(2) ul a {
+	text-decoration: none;
+}
+main section:nth-of-type(2) ul img {
 	width: 10em;
 }
-main section:nth-of-type(2) div:nth-of-type(2) a article h3 {
+main section:nth-of-type(2) ul a article h3 {
 	font-family: var(--font-main);
 	font-size: 0.8em;
 	font-weight: 500;
 	color: var(--color-text);
 	padding: 1em 1em 1em 1em;
 }
-main section:nth-of-type(2) div:nth-of-type(2) a article p {
+main section:nth-of-type(2) ul a article p {
 	font-size: 0.8em;
 	font-weight: 800;
 	color: var(--color-text);
@@ -563,6 +567,7 @@ footer section:nth-of-type(3) ul:first-of-type li ul li {
 	font-family: var(--font-headers);
 }
 footer section:nth-of-type(3) ul:first-of-type li ul li:last-of-type {
+	padding-bottom: 1em;
 	border-bottom: solid lightgrey 0.08em;
 }
 footer section:nth-of-type(3) ul:first-of-type li ul li a {
@@ -692,10 +697,41 @@ footer section:nth-of-type(4) span {
 /* theepot page */
 /****************/
 
+.breadcrumbs ul {
+	display: flex;
+	width: 100%;
+	height: 1em;
+
+	overflow-x: scroll;
+}
+.breadcrumbs ul li a {
+	height: 2em;
+}
+
+/* theepot afbeeldingen slider */
+section:nth-child(1) ul {
+	display: flex;
+	list-style-type: none;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	background-color: var(--color-background);
+	height: 17.5em;
+	align-items: center;
+
+}
+section:nth-child(1) ul img {
+	width: 100vw;
+	padding: 1em 4em;
+}
 
 
 
 
+
+/****************/
+/* styling */
+/****************/
 
 /* hidden */
 .hidden {

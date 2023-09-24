@@ -29,7 +29,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
 
 
 // herfst bij dille: koken met krachtige kruiden
-let scrollContainer = document.querySelector('main section:nth-of-type(2) div:nth-of-type(2)');
+let scrollContainer = document.querySelector('main section:nth-of-type(2) ul');
 let arrowLeft = document.querySelector('main section:nth-of-type(2) button:first-of-type');
 let arrowRight = document.querySelector('main section:nth-of-type(2) button:last-of-type');
 
@@ -63,6 +63,24 @@ arrowRightInstagram.addEventListener('click', function(){
 /**********/
 /* footer */
 /**********/
+
+/* service, over ons & inspiratie */
+let informationButtons = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li button');
+let informationUls = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li ul');
+
+informationUls.forEach(function(ul) {
+    ul.classList.add('hidden');
+});
+
+informationButtons.forEach(function(button, index) {
+    button.addEventListener('click', function(){
+        informationUls[index].classList.toggle('hidden');
+    });
+});
+
+
+
+
 
 /* language dropdown */
 let languageDropdown = document.querySelector('footer section:nth-of-type(3) > button');

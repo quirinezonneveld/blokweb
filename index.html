@@ -52,14 +52,8 @@
 			</button>
 			<input
 			type="search" 
-		type="search"
-			type="search" 
-			name="q" 
-		name="q"
 			name="q" 
 			placeholder="Waar ben je naar op zoek?" 
-			maxlength="30" 
-		maxlength="30"
 			maxlength="30" 
 			aria-label="Search through site content">
 		</div>
@@ -135,44 +129,53 @@
 					<img src="images/iconArrow3.svg" alt="Arrow">
 				</button>
 			</div>
-			<div>
-				<a href="wiegemes.html">
-					<article>
-						<img src="images/wiegemes.jpg" alt="Wiegemes, rubberhout, RVS">
-						<h3>Wiegemes, rubberhout, RVS</h3>
-						<p>7,95</p>
-					</article>
-				</a>
-				<a href="italiaanseKruiden.html">
-					<article>
-						<img src="images/italiaanseKruiden.jpg" alt="Italiaanse Kruiden, biologisch, blikje, 30g">
-						<h3>Italiaanse Kruiden, biologisch, blikje, 30g</h3>
-						<p>4,95</p>
-					</article>
-				</a>
-				<a href="vijzel.html">
-					<article>
-						<img src="images/vijzel.jpg" alt="Vijzel, zwart graniet, Ø 9,5 cm">
-						<h3>Vijzel, zwart graniet, Ø 9,5 cm</h3>
-						<p>14,95</p>
-					</article>
-				</a>
-				<a href="kruidenpotjeMetStrooideksel.html">
-					<article>
-						<img src="images/kruidenpotjeMetStrooideksel.jpg" alt="Kruidenpotje met strooideksel, glas, 90 ml">
-						<h3>Kruidenpotje met strooideksel, 90 ml</h3>
-						<p>1,75</p>
-					</article>
-				</a>
-
-				<a href="salsaDiPomodoro.html">
-					<article>
-						<img src="images/salsaDiPomodoro.jpg" alt="Salsa di pomodoro, basilico, 250 g, biologisch">
-						<h3>Salsa di pomodoro, basilico, 250 g</h3>
-						<p>4,95</p>
-					</article>
-				</a>
-			</div>
+			<ul>
+				<li>
+					<a href="wiegemes.html">
+						<article>
+							<img src="images/wiegemes.jpg" alt="Wiegemes, rubberhout, RVS">
+							<h3>Wiegemes, rubberhout, RVS</h3>
+							<p>7,95</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="italiaanseKruiden.html">
+						<article>
+							<img src="images/italiaanseKruiden.jpg" alt="Italiaanse Kruiden, biologisch, blikje, 30g">
+							<h3>Italiaanse Kruiden, biologisch, blikje, 30g</h3>
+							<p>4,95</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="vijzel.html">
+						<article>
+							<img src="images/vijzel.jpg" alt="Vijzel, zwart graniet, Ø 9,5 cm">
+							<h3>Vijzel, zwart graniet, Ø 9,5 cm</h3>
+							<p>14,95</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="kruidenpotjeMetStrooideksel.html">
+						<article>
+							<img src="images/kruidenpotjeMetStrooideksel.jpg" alt="Kruidenpotje met strooideksel, glas, 90 ml">
+							<h3>Kruidenpotje met strooideksel, 90 ml</h3>
+							<p>1,75</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="salsaDiPomodoro.html">
+						<article>
+							<img src="images/salsaDiPomodoro.jpg" alt="Salsa di pomodoro, basilico, 250 g, biologisch">
+							<h3>Salsa di pomodoro, basilico, 250 g</h3>
+							<p>4,95</p>
+						</article>
+					</a>
+				</li>
+			</ul>
 
 			<img src="images/kokenMetKrachtigeKruiden.jpg" alt="Koken met krachtige kruiden">
 		</section>
@@ -384,7 +387,11 @@
 			</ul>
 			
 
-			<!-- moet een select zijn -->
+
+		<!--  I've replaced the <p> element with a <span>, which is an inline element and more appropriate for including text within a <button> 
+			
+		span ipv p in button?
+		-->
 			<button>
 				<img src="images/flagNederland.png" alt="Flag nederland">
 				<p>NL</p>
@@ -414,21 +421,21 @@
 					</button>
 				</li>
 				<li>
-					<button lang="BE - NL">
+					<button lang="BE-NL">
 						<img src="images/flagBelgie.png" alt="Flag België - Nederlands">
 						<p>België - Nederlands</p>
 						<img src="images/iconCheck2.svg" alt="Check icon">
 					</button>
 				</li>
 				<li>
-					<button lang="BE - FR">
+					<button lang="BE-FR">
 						<img src="images/flagBelgie.png" alt="Flag Belgique - français">
 						<p>Belgique - français</p>
 						<img src="images/iconCheck2.svg" alt="Check icon">
 					</button>
 				</li>
 				<li>
-					<button lang="AT - DE">
+					<button lang="DE-AT">
 						<img src="images/flagOsterreichDeutsch.png" alt="Flag Österreich - Deutsch">
 						<p>Österreich - Deutsch</p>
 						<img src="images/iconCheck2.svg" alt="Check icon">
@@ -443,37 +450,28 @@
 				</li>
 			</ul>
 
-			<!-- <details>
-				<summary>Details</summary>
-				Something small enough to escape casual notice.
-			</details> -->
-
-			<!-- ??? -->
-			<!-- <label for="lang">NL</label>
-			<select name="lang">
-				<option value="Nederland">Nederland</option>
-				<option value="France">France</option>
-				<option value="Deutschland">Deutschland</option>
-				<option value="België - Nederland">België - Nederland</option>
-				<option value="Belgique - français">Belgique - français</option>
-				<option value="Österreich - Deutsch">Österreich - Deutsch</option>
-				<option value="English">English</option>
-			</select> -->
 
 
-			<!-- moet een a zijn -->
 			<ul>
 				<li>
-					<img src="images/iconInstagram.png" alt="Instagram icon">
+					<a href="">
+						<img src="images/iconInstagram.png" alt="Instagram icon">
+					</a>
 				</li>
 				<li>
-					<img src="images/iconPinterest.png" alt="Pinterest icon">
+					<a href="">
+						<img src="images/iconPinterest.png" alt="Pinterest icon">
+					</a>
 				</li>
 				<li>
-					<img src="images/iconFacebook.png" alt="Facebook icon">
+					<a href="">
+						<img src="images/iconFacebook.png" alt="Facebook icon">
+					</a>
 				</li>
 				<li>
-					<img src="images/iconLinkedin.png" alt="Linkedin icon">
+					<a href="">
+						<img src="images/iconLinkedin.png" alt="Linkedin icon">
+					</a>
 				</li>
 			</ul>
 
