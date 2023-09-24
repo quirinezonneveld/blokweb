@@ -16,11 +16,13 @@
 	<header>
 		<div>
 			<img src="images/iconCheck2.svg" alt="Check icon">
-			<p>Vandaag besteld, maandag in huis</p>
+			<p></p>
 		</div>
 		<ul>
 			<li>
-				<img src="images/hamburgermenu2.png" alt="Hamburger menu">
+				<button>
+					<img src="images/hamburgermenu2.png" alt="Hamburger menu">
+				</button>
 			</li>
 			<li>
 				<a href="klantLogin.html">
@@ -44,20 +46,26 @@
 			</li>
 		</ul>
 
-		<input
+		<div>
+			<button>
+				<img src="images/iconSearch2.png" alt="Search button">
+			</button>
+			<input
+			type="search" 
 		type="search"
+			type="search" 
+			name="q" 
 		name="q"
-		placeholder="Search the site…" 
+			name="q" 
+			placeholder="Waar ben je naar op zoek?" 
+			maxlength="30" 
 		maxlength="30"
-		aria-label="Search through site content"
-		/>
-		
-    	<button>Search</button>
+			maxlength="30" 
+			aria-label="Search through site content">
+		</div>
 		<!-- <input type="search”>:
 		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search  -->
 
-		<!-- 
-		<p>searchbar</p> -->
 
 		<!-- <nav>
 			<ul>
@@ -77,13 +85,14 @@
 		<div>
 			<p>Wijsheden uit de natuur</p>
 			<h1>Herfst bij Dille</h1>
-			<a href="herfst.html">Bekijk hier</a>
+			<a href="theepot.html">Bekijk hier</a>
 		</div>
 		<img src="images/theerituelen.jpg" alt="Theerituelen">
 	</header>
 
 	<main>
 		<section>
+			<h2>Categoriën</h2>
 				<a href="rietenManden.html">
 					<article>
 						<img src="images/rietenManden.jpg" alt="Rieten manden">
@@ -151,7 +160,7 @@
 				<a href="kruidenpotjeMetStrooideksel.html">
 					<article>
 						<img src="images/kruidenpotjeMetStrooideksel.jpg" alt="Kruidenpotje met strooideksel, glas, 90 ml">
-						<h3>Kruidenpotje met strooideksel, glas, 90 ml</h3>
+						<h3>Kruidenpotje met strooideksel, 90 ml</h3>
 						<p>1,75</p>
 					</article>
 				</a>
@@ -159,7 +168,7 @@
 				<a href="salsaDiPomodoro.html">
 					<article>
 						<img src="images/salsaDiPomodoro.jpg" alt="Salsa di pomodoro, basilico, 250 g, biologisch">
-						<h3>Salsa di pomodoro, basilico, 250 g, biologisch</h3>
+						<h3>Salsa di pomodoro, basilico, 250 g</h3>
 						<p>4,95</p>
 					</article>
 				</a>
@@ -225,12 +234,18 @@
 					<img src="images/instagramGroenten.webp" alt="Instagram groenten">
 				</li>
 			</ul>
-			<button>
-				<img src="images/iconArrowInstagram.gif" alt="Arrow">
-			</button>
-			<button>
-				<img src="images/iconArrowInstagram.gif" alt="Arrow">
-			</button>
+			<ul>
+				<li>
+					<button>
+						<img src="images/iconArrowInstagram.gif" alt="Arrow">
+					</button>
+				</li>
+				<li>
+					<button>
+						<img src="images/iconArrowInstagram.gif" alt="Arrow">
+					</button>
+				</li>
+			</ul>
 		</section>
 
 	</main>
@@ -253,7 +268,7 @@
 			<img src="images/dilleKamilleWinkel.jpg" alt="Dille & Kamille winkel">
 
 			<div>
-				<p>Altijd in de buurt</p>
+				<h3>Altijd in de buurt</h3>
 				<a href="winkels.html">Bekijk alle 45 winkels</a>
 			</div>
 		</section>
@@ -273,7 +288,10 @@
 			<a href="klantenservice.html">Online klantenservice</a>
 		</section>
 
+
+
 		<section>
+			<h2>Gegevens</h2>
 			<div>
 				<img src="images/logo.svg" alt="Logo Dille & Kamille">
 				<p>Beoordeling 4.64 van 5 door 10731 klanten</p>
@@ -281,12 +299,155 @@
 
 			<p>Alle genoemde prijzen zijn consumentenprijzen en incclusief BTW.</p>
 			
-			<button>Service</button>
-			<button>Over ons</button>
-			<button>Inspiratie</button>
+			<ul>
+				<li>
+					<button>
+						Service
+						<img src="images/iconAdd.svg" alt="See more icon">
+					</button>
+					<ul>
+						<li>
+							<a href="">Meest gestelde vragen</a>
+						</li>
+						<li>
+							<a href="">Bezorgopties & levertijd</a>
+						</li>
+						<li>
+							<a href="">Retourneren & ruilen</a>
+						</li>
+						<li>
+							<a href="">Salso cadeaukaart</a>
+						</li>
+						<li>
+							<a href="">Geschenk- en kerstpakketten</a>
+						</li>
+						<li>
+							<a href="">Meer...</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button>
+						Over ons
+						<img src="images/iconAdd.svg" alt="See more icon">
+					</button>
+					<ul>
+						<li>
+							<a href="">Over Dille & Kamille</a>
+						</li>
+						<li>
+							<a href="">Onze winkels</a>
+						</li>
+						<li>
+							<a href="">Zakelijk</a>
+						</li>
+						<li>
+							<a href="">Vacatures</a>
+						</li>
+						<li>
+							<a href="">Duurzaamheid</a>
+						</li>
+						<li>
+							<a href="">Pers</a>
+						</li>
+						<li>
+							<a href="">Bedrijfsgegevens</a>
+						</li>
+						<li>
+							<a href="">Meest gestelde vragen</a>
+						</li>
+						<li>
+							<a href="">B Corp certificaat</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button>
+						Inspiratie
+						<img src="images/iconAdd.svg" alt="See more icon">
+					</button>
+					<ul>
+						<li>
+							<a href="">Tips en inspiratie</a>
+						</li>
+						<li>
+							<a href="">Onze workshops</a>
+						</li>
+						<li>
+							<a href="">Recepten</a>
+						</li>
+						<li>
+							<a href="">Nieuwsbrief</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<button>
+				<img src="images/flagNederland.png" alt="Flag nederland">
+				<p>NL</p>
+				<img src="images/iconArrowDropdown.png" alt="">
+			</button>
+
+			<ul>
+				<li>
+					<button lang="NL">
+						<img src="images/flagNederland.png" alt="Flag nederland">
+						<p>Nederland</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="FR">
+						<img src="images/flagFrance.png" alt="Flag France">
+						<p>France</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="DE">
+						<img src="images/flagDeutschland.png" alt="Flag Deutschland">
+						<p>Deutschland</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="BE - NL">
+						<img src="images/flagBelgie.png" alt="Flag België - Nederlands">
+						<p>België - Nederlands</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="BE - FR">
+						<img src="images/flagBelgie.png" alt="Flag Belgique - français">
+						<p>Belgique - français</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="AT - DE">
+						<img src="images/flagOsterreichDeutsch.png" alt="Flag Österreich - Deutsch">
+						<p>Österreich - Deutsch</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+				<li>
+					<button lang="EN">
+						<img src="images/flagEnglish.png" alt="Flag English">
+						<p>English</p>
+						<img src="images/iconCheck2.svg" alt="Check icon">
+					</button>
+				</li>
+			</ul>
+
+			<!-- <details>
+				<summary>Details</summary>
+				Something small enough to escape casual notice.
+			</details> -->
 
 			<!-- ??? -->
-			<label for="lang">NL</label>
+			<!-- <label for="lang">NL</label>
 			<select name="lang">
 				<option value="Nederland">Nederland</option>
 				<option value="France">France</option>
@@ -295,7 +456,7 @@
 				<option value="Belgique - français">Belgique - français</option>
 				<option value="Österreich - Deutsch">Österreich - Deutsch</option>
 				<option value="English">English</option>
-			</select>
+			</select> -->
 
 			<ul>
 				<li>

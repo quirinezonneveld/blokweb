@@ -29,6 +29,8 @@
 	--font-main: "Gill Sans MT",sans-serif;
 	--font-headers: 'Courier New', Courier, monospace;
 
+	--font-size-main: 1em;
+
 	--button-background: black;
 	--button-text-color: white;
 	--button-font-size: 1.2em;
@@ -73,35 +75,53 @@ header div:first-of-type p {
 	font-size: 0.8em;
 	color: var(--color-text2);
 	font-weight: 300;
-	/* animation: verschijn 2s ease; */
 }
-/* @keyframes verschijn {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
-} */
+
 
 /* navigatie */
-header ul {
+header ul:nth-of-type(1) {
 	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
 	text-align: center;
 	align-items: center;
 }
-header ul li img {
+header ul:nth-of-type(1) li img {
 	width: 1.7em;
 	height: 1.7em;
 }
-header ul li:nth-of-type(3) img {
+header ul:nth-of-type(1) li:nth-of-type(3) img {
 	width: 5em;
 	height: 5em;
 	margin-right: 1.5em;
 	margin-left: 1.5em;
 }
+header ul:nth-of-type(1) li button {
+	border: none;
+	background-color: var(--color-background);
+}
 
 /* zoekbalk */
-
-
+header div:nth-of-type(2) {
+	display: flex;
+	border: solid lightgrey 0.05em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	margin-bottom: 0.8em;
+	padding: 0.3em 1em 0.3em 1em;
+	gap: 1em;
+}
+header div:nth-last-of-type(2) > * {
+	border: none;
+	background-color: var(--color-background);
+}
+header div:nth-last-of-type(2) button {
+	scale: 0.8;
+}
+header div:nth-last-of-type(2) input {
+	font-size: var(--font-size-main);
+	width: 100%;
+}
 
 
 /* header */
@@ -172,20 +192,24 @@ main section:nth-of-type(1) a p {
 	color: var(--color-text);
 	font-family: var(--font-main);
 }
+main section:nth-of-type(1) h2 {
+	position: absolute;
+	visibility: hidden;
+}
 
 
 
 
 
 
-/* koken met krachtige kruiden */
+/* herfst bij dille, koken met krachtige kruiden */
 main section:nth-of-type(2) {
 	padding-bottom: 20em;
 }
 main section:nth-of-type(2) div:nth-of-type(1) {
 	display: grid;
 	grid-template-columns: 0.5em 8fr 1fr 1fr 0.5em;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 2em;
 	grid-gap: 0.5em;
 	background: var(--color-background2);
 }
@@ -217,29 +241,27 @@ main section:nth-of-type(2) button:last-of-type {
 https://css-tricks.com/snippets/css/flip-an-image/ */
 
 
+
 main section:nth-of-type(2) div:nth-of-type(2) {
 	display: flex;
 	overflow-x: auto;
-	/* background-color: var(--color-background2); */
-	
-}
-main section:nth-of-type(2) div:nth-of-type(2) img {
-	width: 10em;	
-}
-
-main section:nth-of-type(2) img:nth-child(3) {
-	position: absolute;
-	width: 100%;
-	transform: translateY(-10em);
-	z-index: -1;
-}
-
-main section:nth-of-type(2) div:nth-of-type(2) {
+	background-color: var(--color-background2);
+	scroll-behavior: smooth;
 	gap: 1em;
 }
+main section:nth-of-type(2) div:nth-of-type(2)::-webkit-scrollbar {
+	display: none;
+}
+
+
 main section:nth-of-type(2) div:nth-of-type(2) a {
 	background-color: var(--color-background);
 	text-decoration: none;
+	/* transform: translateX(-4em); */
+	z-index: 2;
+}
+main section:nth-of-type(2) div:nth-of-type(2) img {
+	width: 10em;
 }
 main section:nth-of-type(2) div:nth-of-type(2) a article h3 {
 	font-family: var(--font-main);
@@ -252,10 +274,16 @@ main section:nth-of-type(2) div:nth-of-type(2) a article p {
 	font-size: 0.8em;
 	font-weight: 800;
 	color: var(--color-text);
-	padding: 1em 1em 0 1em;
+	text-justify: end;
+	padding: 1em;
 }
 
-
+main section:nth-of-type(2) img:nth-child(3) {
+	position: absolute;
+	width: 100%;
+	transform: translateY(-10em);
+	z-index: 1;
+}
 
 
 
@@ -312,6 +340,9 @@ main section:nth-of-type(3) article p {
 	padding-top: 0.8em;
 	padding-bottom: 2em;
 }
+main section:nth-of-type(3) article:last-of-type {
+	margin-bottom: 7em;
+}
 
 
 
@@ -326,26 +357,50 @@ main section:nth-of-type(4) p {
 	font-family: var(--font-headers);
 	font-weight: 700;
 	font-size: 2em;
+	margin-bottom: 1em;
 }
-main section:nth-of-type(4) ul {
+
+main section:nth-of-type(4) ul:nth-of-type(1) {
 	display: flex;
 	overflow-x: auto;
-	gap: 1em;
+	gap: 5em;
 	list-style-type: none;
+	scroll-behavior: smooth;
 }
-main section:nth-of-type(4) ul li img {
-	width: 15em;
+main section:nth-of-type(4) ul:nth-of-type(1)::-webkit-scrollbar {
+	display: none;
 }
-main section:nth-of-type(4) button {
+
+main section:nth-of-type(4) ul:nth-of-type(1) li img {
+	width: 16em;
+	box-shadow: 0 0 0.8em lightgrey;
+}
+/* box-shadow:
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow  */
+main section:nth-of-type(4) ul:nth-of-type(1) li:first-of-type img {
+	margin-left: 1.5em;
+}
+main section:nth-of-type(4) ul:nth-of-type(1) li:last-of-type img {
+	margin-right: 1.5em;
+}
+
+/* arrow buttons */
+main section:nth-of-type(4) ul:last-of-type {
+	display: flex;
+	width: 100%;
+	list-style-type: none;
+	justify-content: center;
+	gap: 1em;
+}
+main section:nth-of-type(4) ul:last-of-type button {
 	border: none;
-	background-color: rgb(197, 197, 197);
-	border-radius: 100%;
+	background-color: transparent;
 }
-main section:nth-of-type(4) button img {
+main section:nth-of-type(4) ul:last-of-type button img {
 	width: 3em;
 	height: 3em;
 }
-main section:nth-of-type(4) button:first-of-type {
+main section:nth-of-type(4) ul:last-of-type li:first-of-type {
 	transform: scaleX(-1);
 }
 
@@ -357,21 +412,30 @@ main section:nth-of-type(4) button:first-of-type {
 /* footer */
 /* wordt member van dille & kamille en ontvang */
 footer article {
+	display: grid;
+	grid-template-columns: 1.5em 1fr 1.5em;
+	grid-template-rows: 12em 1fr 1fr 2em 1fr 1.5em 3.5em 2.5em;
 	background-color: var(--color-background5);
 	margin-left: 1.5em;
 	margin-right: 1.5em;
 	margin-bottom: 5em;
-	/* padding: 2.5em 1.25em 2.5em 1.25em; */
 }
-
-
 footer article img {
-	width: 100%;
+	grid-area: 1 / 1 / 2 / -1;
+	width: 20.45em;
 }
+footer article h2 {
+	grid-area: 3 / 2 / 4 / 3;
+}
+footer article ul {
+	grid-area: 5 / 2 / 6 / 3;
+	margin-left: 0.5em;
+}
+
 footer article ul li {
-	list-style-type: "-";
+	list-style-type: "- ";
 }
-/* list-style-type
+/* list-style-type:
 https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
 
 footer article button {
@@ -382,6 +446,7 @@ footer article button {
     width: fit-content;
     text-decoration: none;
     font-size: var(--button-font-size);
+	grid-area: 7 / 2 / 8 / 3;
 }
 
 
@@ -392,7 +457,11 @@ footer article button {
 footer section:first-of-type {
 	background-color: var(--color-background4);
 	color: var(--color-text2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+
 footer section:first-of-type img {
 	width: 100%;
 }
@@ -404,8 +473,10 @@ footer section:first-of-type div {
 	font-family: var(--font-headers);
 	transform: translateY(-3.5em);
 }
-footer section:first-of-type div p {
+footer section:first-of-type div h3 {
 	font-size: var(--button-font-size);
+	font-weight: 400;
+	margin-bottom: 1em;
 }
 footer section:first-of-type div a {
 	color: var(--button-text-color);
@@ -434,13 +505,21 @@ footer section:nth-of-type(2) a {
 	color: var(--color-text2);
 }
 
+
+
 /* gegevens */
 footer section:nth-of-type(3) {
-	padding: 5em 1em 3em 1em;
+	margin: 4em 1em 3em 1em;
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
 }
+footer section:nth-of-type(3) h2 {
+	position: absolute;
+	visibility: hidden;
+}
+
+/* logo & beoordeling */
 footer section:nth-of-type(3) div {
 	display: flex;
 	gap: 2.5em;
@@ -450,25 +529,148 @@ footer section:nth-of-type(3) img {
 	width: 7em;
 }
 
-footer section:nth-of-type(3) ul:first-of-type {
-	list-style-type: none;
-	display: flex;
-	gap: 1.5em;
-}
-footer section:nth-of-type(3) ul:first-of-type li img {
-	width: 1.5em;
-	height: 1.5em;
+/* p lichtgrijs */
+footer section:nth-of-type(3) > p {
+	color: lightgrey;
 }
 
-footer section:nth-of-type(3) ul:nth-of-type(2) {
+/* service, over ons & inspiratie */
+footer section:nth-of-type(3) ul:first-of-type li {
 	list-style-type: none;
 }
-footer section:nth-of-type(3) ul:nth-of-type(2) li a {
+footer section:nth-of-type(3) ul:first-of-type button {
+	display: flex;
+	justify-content: space-between;
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	font-family: var(--font-headers);
+	font-size: var(--button-font-size);
+	text-align: start;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-bottom: solid lightgrey 0.08em;
+}
+footer section:nth-of-type(3) ul:first-of-type img {
+	align-items: end;
+	justify-content: end;
+	float: inline-end;
+	width: 5%;
+}
+
+footer section:nth-of-type(3) ul:first-of-type li ul li {
+	margin-top: 1em;
+	font-family: var(--font-headers);
+}
+footer section:nth-of-type(3) ul:first-of-type li ul li:last-of-type {
+	border-bottom: solid lightgrey 0.08em;
+}
+footer section:nth-of-type(3) ul:first-of-type li ul li a {
 	color: var(--color-text);
 	text-decoration: none;
 }
 
+
+/* language dropdown */
+footer section:nth-of-type(3) > button {
+	display: flex;
+	border: none;
+	padding: 1em;
+	align-items: center;
+}
+footer section:nth-of-type(3) > button img {
+	width: 1.5em;
+}
+/* footer section:nth-of-type(3) > button::before {
+	background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+} */
+
+footer section:nth-of-type(3) > button img:first-of-type {
+	margin-right: 1em;
+}
+footer section:nth-of-type(3) > button p {
+	font-size: 1.3em;
+}
+footer section:nth-of-type(3) > button img:last-of-type {
+	margin-left: auto;
+}
+
+
+/* language dropdown ul */
+footer section:nth-of-type(3) ul:nth-of-type(2) {
+	list-style-type: none;
+	background-color: var(--color-background);
+	padding: 1.5em;
+	position: block;
+	width: 21.4em;
+	flex-direction: column;
+	box-shadow: 0 0.5em 0.85em lightgrey;
+	transform: translateY(-2em);
+}
+
+footer section:nth-of-type(3) ul:nth-of-type(2) li button {
+	background-color: transparent;
+	border: none;
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	margin-bottom: 0.5em;
+	width: 100%;
+}
+
+
+footer section:nth-of-type(3) ul:nth-of-type(2) li img {
+	height: 1em;
+	width: fit-content;
+}
+footer section:nth-of-type(3) ul:nth-of-type(2) li img:last-child {
+	margin-left: auto;
+	height: 0.5em;
+}
+
+
+/* social media icons */
 footer section:nth-of-type(3) ul:nth-of-type(3) {
+	display: flex;
+	list-style-type: none;
+	gap: 1em;
+}
+footer section:nth-of-type(3) ul:nth-of-type(3) li img {
+	height: 1.5em;
+	width: fit-content;
+}
+/* fit-content:
+https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content  */
+
+/* ul */
+footer section:nth-of-type(3) ul:nth-of-type(4) {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 4em;
+}
+footer section:nth-of-type(3) ul:nth-of-type(4) li a {
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+
+
+
+
+
+/* certificaten */
+footer section:nth-of-type(3) ul:nth-of-type(5) {
 	display: flex;
 	list-style-type: none;
 	justify-content: center;
@@ -476,11 +678,11 @@ footer section:nth-of-type(3) ul:nth-of-type(3) {
 
 	border-top: solid lightgrey 0.1em;
 }
-footer section:nth-of-type(3) ul:nth-of-type(3) li img {
+footer section:nth-of-type(3) ul:nth-of-type(5) li img {
 	width: 5em;
 }
 
-footer section:nth-of-type(3) span {
+footer section:nth-of-type(4) span {
 	text-align: center;
 }
 
@@ -489,3 +691,13 @@ footer section:nth-of-type(3) span {
 /****************/
 /* theepot page */
 /****************/
+
+
+
+
+
+
+/* hidden */
+.hidden {
+    display: none;
+}
