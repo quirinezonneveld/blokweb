@@ -58,31 +58,46 @@ arrowRightInstagram.addEventListener('click', function(){
 
 
 
-// footer
+
+
+/**********/
+/* footer */
+/**********/
+
+/* language dropdown */
 let languageDropdown = document.querySelector('footer section:nth-of-type(3) > button');
 let languageDropdownUl = document.querySelector('footer section:nth-of-type(3) ul:nth-of-type(2)');
+let languageDropdownArrow = document.querySelector('footer section:nth-of-type(3) > button img:last-of-type');
 let languageDropdownCheck = document.querySelectorAll('footer section:nth-of-type(3) ul:nth-of-type(2) li img:last-child');
 
+
+//hidden
 languageDropdownUl.classList.add('hidden');
 
 languageDropdownCheck.forEach(function(img) {
-    console.log(img)
     img.classList.add('hidden');
 });
 languageDropdownCheck[0].classList.remove('hidden')
+/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach */
 
 
+// toggle
 languageDropdown.addEventListener('click', function(){
     languageDropdownUl.classList.toggle('hidden');
+
+    // languageDropdownArrow.src='images/iconArrowDropdownUp.png';
 })
 
-let languageSelectionItem = document.querySelector('body > footer > section:nth-child(4) > ul:nth-child(6)');
 
-languageSelectionItem.addEventListener('click', function(event) {
+// click language
+function languageDropdownClick(event) {
     let buttonElement = event.target.closest('button');
 
     if (buttonElement) {
         let liElement = buttonElement.closest('li');
+
+        // meaning a <button> element was clicked inside the languageDropdownUl element.
+        
 
         if (liElement) {
             // hide all checkmarks
@@ -90,27 +105,39 @@ languageSelectionItem.addEventListener('click', function(event) {
                 img.classList.add('hidden');
             });
 
-            // display the checkmark for the right language
+
+            // display checkmark right language
             let checkmarkIcon = liElement.querySelectorAll('img')[1];
 
             if (checkmarkIcon) {
                 checkmarkIcon.classList.remove('hidden');
             }
 
-            // change language in main language button
-            // start with img
-            flagImgUrl = liElement.querySelectorAll('img')[0].getAttribute('src');
 
+            // change language img
+            flagUl = liElement.querySelectorAll('img')[0].getAttribute('src');
             flag = languageDropdown.querySelectorAll('img')[0];
-            flag.setAttribute('src', flagImgUrl)
 
+            flag.setAttribute('src', flagUl)
+
+        
             // now lang name
-            newLangName = buttonElement.getAttribute('lang');
+            langNameUl = buttonElement.getAttribute('lang');
             langName = languageDropdown.querySelectorAll('p')[0];
-            langName.textContent = newLangName;
-
             
+            langName.textContent = langNameUl;
         }
     }
-});
+};
+languageDropdownUl.addEventListener('click', languageDropdownClick);
+
+/* target: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+   closest(): https://www.w3schools.com/jsref/met_element_closest.asp
+
+   the event.target property can be used in order to implement event delegation.
+   the closest() method searches up the DOM tree for elements which matches a specified CSS selector.
+
+   GetAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute 
+   SetAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute 
+*/
 
