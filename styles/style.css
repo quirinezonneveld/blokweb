@@ -79,27 +79,88 @@ header div:first-of-type p {
 
 
 /* navigatie */
-header ul:nth-of-type(1) {
+header nav ul:nth-of-type(1) {
 	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
 	text-align: center;
 	align-items: center;
 }
-header ul:nth-of-type(1) li img {
+header nav ul:nth-of-type(1) li img {
 	width: 1.7em;
 	height: 1.7em;
 }
-header ul:nth-of-type(1) li:nth-of-type(3) img {
+header nav ul:nth-of-type(1) li:nth-of-type(3) img {
 	width: 5em;
 	height: 5em;
 	margin-right: 1.5em;
 	margin-left: 1.5em;
 }
-header ul:nth-of-type(1) li button {
+header nav ul:nth-of-type(1) li button {
 	border: none;
 	background-color: var(--color-background);
 }
+
+/* hamburgermenu */
+header nav ul:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-background);
+	padding: 2.2em 2em;
+	gap: 1em;
+	height: 30em;
+	width: 100%;
+	top: 0;
+	overflow-y: auto;
+	z-index: 20;
+	position: absolute;
+	/* visibility: hidden; */
+}
+header nav ul:nth-of-type(2) li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul:nth-of-type(2) li button {
+	display: flex;
+	border: none;
+	justify-content: space-between;
+	background-color: transparent;
+	width: 100%;
+	font-size: 1em;
+}
+
+header nav ul:nth-of-type(2) li img {
+	width: 0.5em;
+}
+
+/* hamburgermenu bovenkant */
+header nav ul:nth-of-type(2) li:first-child a {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2em;
+}
+header nav ul:nth-of-type(2) li:first-child img:first-of-type {
+	height: 2.5em;
+	width: fit-content;
+}
+header nav ul:nth-of-type(2) li:first-child img:nth-of-type(2) {
+	height: 1.2em;
+	width: fit-content;
+}
+
+header nav ul:nth-of-type(2) li a {
+	font-family: var(--font-headers);
+	text-decoration: none;
+	color: var(--color-text);
+	font-size: 1.25em;
+}
+
+
+
 
 /* zoekbalk */
 header div:nth-of-type(2) {
@@ -111,20 +172,23 @@ header div:nth-of-type(2) {
 	padding: 0.3em 1em 0.3em 1em;
 	gap: 1em;
 }
-header div:nth-last-of-type(2) > * {
+header div:nth-of-type(2) > * {
 	border: none;
 	background-color: var(--color-background);
 }
-header div:nth-last-of-type(2) button {
+header div:nth-of-type(2) button {
 	scale: 0.8;
 }
-header div:nth-last-of-type(2) input {
+header div:nth-of-type(2) input {
 	font-size: var(--font-size-main);
 	width: 100%;
+	cursor: text;
 }
+/* Cursor:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/cursor  */
 
 
-/* header */
+/* wijsheden uit de natuur, herfst bij dille */
 header div:last-of-type {
 	display: flex;
 	flex-direction: column;
@@ -142,7 +206,7 @@ header > img:last-child {
 /* transform: translate():
 https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
 
-header div a {
+header div:last-of-type a {
 	background-color: var(--button-background);
 	color: var(--button-text-color);
 	font-family: var(--font-headers);
@@ -151,7 +215,7 @@ header div a {
 	text-decoration: none;
 	font-size: var(--button-font-size);
 }
-header div p {
+header div:last-of-type p {
 	width: fit-content;
 	padding: 0;
 	font-weight: 600;
@@ -614,7 +678,6 @@ footer section:nth-of-type(3) ul:nth-of-type(2) {
 	list-style-type: none;
 	background-color: var(--color-background);
 	padding: 1.5em;
-	position: block;
 	width: 21.4em;
 	flex-direction: column;
 	box-shadow: 0 0.5em 0.85em lightgrey;
@@ -679,16 +742,24 @@ footer section:nth-of-type(3) ul:nth-of-type(5) {
 	display: flex;
 	list-style-type: none;
 	justify-content: center;
-	gap: 1em;
+	gap: 1.5em;
 
+	padding-top: 1em;
 	border-top: solid lightgrey 0.1em;
+	align-items: center;
 }
 footer section:nth-of-type(3) ul:nth-of-type(5) li img {
-	width: 5em;
+	height: 2em;
+	width: fit-content;
+}
+footer section:nth-of-type(3) ul:nth-of-type(5) li:nth-of-type(1) img{
+	height: 5em;
+
 }
 
-footer section:nth-of-type(4) span {
-	text-align: center;
+footer section:last-of-type span {
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -718,11 +789,27 @@ section:nth-child(1) ul {
 	background-color: var(--color-background);
 	height: 17.5em;
 	align-items: center;
-
 }
+section:nth-child(1) ul::-webkit-scrollbar {
+	display: none;
+}
+
 section:nth-child(1) ul img {
 	width: 100vw;
 	padding: 1em 4em;
+}
+
+
+/* section:nth-child(1) div {
+	display: flex;
+} */
+
+section:nth-child(1) button {
+	border: none;
+	background-color: transparent;
+}
+section:nth-child(1) button img {
+	width: 2em;
 }
 
 

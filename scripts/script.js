@@ -58,6 +58,12 @@ arrowRightInstagram.addEventListener('click', function(){
 
 
 
+//theepot
+let scrollContainerTheepot = document.querySelector('section:nth-child(1) ul');
+
+
+
+
 
 
 /**********/
