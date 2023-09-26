@@ -31,8 +31,12 @@ async function updateAndRemove() {
     navigatieMeldingCheck.classList.remove('navigatieVerschijn');
         
 }
-updateAndRemove();
-setInterval(updateAndRemove, 3000);
+
+if (navigatieMelding) {
+    updateAndRemove();
+    setInterval(updateAndRemove, 3000);
+
+}
 
 /* textContent:
 https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
@@ -46,6 +50,9 @@ let hamburgermenuButton = document.querySelector('header nav ul:first-of-type li
 let hamburgermenuBovenkant = document.querySelector('header nav ul:nth-of-type(2)');
 let hamburgermenuOnderkant = document.querySelector('footer > ul:last-of-type');
 
+
+
+
 hamburgermenuBovenkant.classList.add('hiddenVisibility');
 hamburgermenuOnderkant.classList.add('hiddenVisibility');
 
@@ -53,7 +60,11 @@ function openHamburgermenu() {
     hamburgermenuBovenkant.classList.remove('hiddenVisibility');
     hamburgermenuOnderkant.classList.remove('hiddenVisibility');
 };
+
 hamburgermenuButton.addEventListener('click', openHamburgermenu);
+
+
+
 
 
 
@@ -65,12 +76,14 @@ let scrollContainer = document.querySelector('main section:nth-of-type(2) ul');
 let arrowLeft = document.querySelector('main section:nth-of-type(2) button:first-of-type');
 let arrowRight = document.querySelector('main section:nth-of-type(2) button:last-of-type');
 
-arrowLeft.addEventListener('click', function(){
-    scrollContainer.scrollLeft -= 300;
-});
-arrowRight.addEventListener('click', function(){
-    scrollContainer.scrollLeft += 300;
-});
+if (arrowLeft && arrowRight) {
+    arrowLeft.addEventListener('click', function(){
+        scrollContainer.scrollLeft -= 300;
+    });
+    arrowRight.addEventListener('click', function(){
+        scrollContainer.scrollLeft += 300;
+    });
+}
 /* image galary:
 https://www.youtube.com/watch?v=gzXyRa7jwk4 */
 
@@ -81,17 +94,62 @@ let scrollContainerInstagram = document.querySelector('main section:nth-of-type(
 let arrowLeftInstagram = document.querySelector('main section:nth-of-type(4) ul:last-of-type li:first-of-type');
 let arrowRightInstagram = document.querySelector('main section:nth-of-type(4) ul:last-of-type li:last-of-type');
 
-arrowLeftInstagram.addEventListener('click', function(){
-    scrollContainerInstagram.scrollLeft -= 335;
-});
-arrowRightInstagram.addEventListener('click', function(){
-    scrollContainerInstagram.scrollLeft += 335;
-});
+if (arrowLeftInstagram && arrowRightInstagram) {
+    arrowLeftInstagram.addEventListener('click', function(){
+        scrollContainerInstagram.scrollLeft -= 335;
+    });
+    arrowRightInstagram.addEventListener('click', function(){
+        scrollContainerInstagram.scrollLeft += 335;
+    });
+
+}
+
+
 
 
 
 //theepot
 let scrollContainerTheepot = document.querySelector('section:nth-child(1) ul');
+let buttonProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button');
+let iconProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button img');
+let buttonSpecificaties = document.querySelector('.theepotDropdown li:last-of-type button');
+let iconSpecificaties = document.querySelector('.theepotDropdown li:last-of-type button img');
+
+let productinformatie = document.querySelector('.theepotDropdown li p');
+let specificaties = document.querySelector('.theepotDropdown li div');
+
+
+if (productinformatie && specificaties) {
+    productinformatie.classList.add('hidden');
+    specificaties.classList.add('hidden');
+
+    function openProductinformatieTheepot() {
+        productinformatie.classList.toggle('hidden');
+
+        if (productinformatie.classList.contains('hidden')) {
+            iconProductinformatie.src = "images/iconAdd.svg";
+        } else {
+            iconProductinformatie.src = "images/iconStripe.svg";
+        }
+    };
+    buttonProductinformatie.addEventListener('click', openProductinformatieTheepot);
+
+    function openSpecificatiesTheepot() {
+        specificaties.classList.toggle('hidden');
+
+        if (specificaties.classList.contains('hidden')) {
+            iconSpecificaties.src = "images/iconAdd.svg";
+        } else {
+            iconSpecificaties.src = "images/iconStripe.svg";
+        }
+    };
+    buttonSpecificaties.addEventListener('click', openSpecificatiesTheepot);
+}
+
+
+
+
+
 
 
 
@@ -106,9 +164,11 @@ let scrollContainerTheepot = document.querySelector('section:nth-child(1) ul');
 let informationButtons = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li button');
 let informationUls = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li ul');
 
+
 informationUls.forEach(function(ul) {
     ul.classList.add('hidden');
 });
+
 
 informationButtons.forEach(function(button, index) {
     button.addEventListener('click', function(){
@@ -128,21 +188,23 @@ let languageDropdownCheck = document.querySelectorAll('footer section:nth-of-typ
 
 
 //hidden
-languageDropdownUl.classList.add('hidden');
+if (languageDropdown) {
+    languageDropdownUl.classList.add('hidden');
+    
+    languageDropdownCheck.forEach(function(img) {
+        img.classList.add('hidden');
+    });
+    languageDropdownCheck[0].classList.remove('hidden')
+    /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach */
 
-languageDropdownCheck.forEach(function(img) {
-    img.classList.add('hidden');
-});
-languageDropdownCheck[0].classList.remove('hidden')
-/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach */
+    // toggle
+    languageDropdown.addEventListener('click', function(){
+        languageDropdownUl.classList.toggle('hidden');
+    
+        // languageDropdownArrow.src='images/iconArrowDropdownUp.png';
+    })
+}
 
-
-// toggle
-languageDropdown.addEventListener('click', function(){
-    languageDropdownUl.classList.toggle('hidden');
-
-    // languageDropdownArrow.src='images/iconArrowDropdownUp.png';
-})
 
 
 // click language
@@ -185,7 +247,11 @@ function languageDropdownClick(event) {
         }
     }
 };
-languageDropdownUl.addEventListener('click', languageDropdownClick);
+
+if (languageDropdownUl) {
+
+    languageDropdownUl.addEventListener('click', languageDropdownClick);
+}
 
 /* target: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
    closest(): https://www.w3schools.com/jsref/met_element_closest.asp
