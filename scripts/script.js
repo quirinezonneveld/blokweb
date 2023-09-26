@@ -3,26 +3,41 @@ console.log("hi");
 
 
 
+//sleep
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
 
 
 // navigatie melding
 let navigatieMelding = document.querySelector('header div:first-of-type p');
+let navigatieMeldingCheck = document.querySelector('header div:first-of-type img');
 let navigatieMeldingText = ['Vandaag besteld, maandag in huis', 'Gratis verzending vanaf 39 euro', 'Gratis afhalen in 27 winkels'];
 let index = 0;
 
-function updateText() {
+
+async function updateAndRemove() {
+    navigatieMelding.classList.add('navigatieVerschijn');
+    navigatieMeldingCheck.classList.add('navigatieVerschijn');
+
     navigatieMelding.textContent = navigatieMeldingText[index];
     index = (index + 1) % navigatieMeldingText.length;
-    //  % navigatieMeldingText.length zorgt ervoor dat index niet buiten de grenzen van array valt
+
+    await sleep(3600);
+    navigatieMelding.classList.remove('navigatieVerschijn');
+    navigatieMeldingCheck.classList.remove('navigatieVerschijn');
+        
 }
-function animateText() {
-    updateText(); // Start met de eerste tekst
-    setInterval(updateText, 3000); 
-  }
-animateText();
+updateAndRemove();
+setInterval(updateAndRemove, 3000);
 
 /* textContent:
 https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
+
+
 
 
 
