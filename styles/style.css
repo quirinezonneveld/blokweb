@@ -129,11 +129,21 @@ header nav ul:nth-of-type(2) li button {
 	background-color: transparent;
 	width: 100%;
 	font-size: 1em;
+	align-items: center;
+}
+
+header nav ul:nth-of-type(2) li a {
+	font-family: var(--font-headers);
+	text-decoration: none;
+	color: var(--color-text);
+	font-size: 1.32em;
 }
 
 header nav ul:nth-of-type(2) li img {
 	width: 0.5em;
 }
+
+
 
 /* hamburgermenu bovenkant */
 header nav ul:nth-of-type(2) li:first-child a {
@@ -152,13 +162,36 @@ header nav ul:nth-of-type(2) li:first-child img:nth-of-type(2) {
 	width: fit-content;
 }
 
-header nav ul:nth-of-type(2) li a {
-	font-family: var(--font-headers);
+
+
+/* hamburgermenu onderkant */
+footer > ul:last-of-type {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--color-background2);
+	top: 30em;
+	padding-top: 2em;
+	padding-bottom: 13em;
+	position: absolute;
+	width: 100%;
+	/* visibility: hidden; */
+}
+footer > ul:last-of-type a {
 	text-decoration: none;
 	color: var(--color-text);
-	font-size: 1.25em;
 }
-
+footer > ul:last-of-type li:last-of-type button {
+	display: flex;
+	border: none;
+	background-color: transparent;
+	align-items: center;
+	gap: 0.5em;
+}
+footer > ul:last-of-type li:last-of-type img {
+	height: 1em;
+}
 
 
 
@@ -342,7 +375,6 @@ main section:nth-of-type(2) ul a article p {
 	font-size: 0.8em;
 	font-weight: 800;
 	color: var(--color-text);
-	text-justify: end;
 	padding: 1em;
 }
 
@@ -823,4 +855,7 @@ section:nth-child(1) button img {
 /* hidden */
 .hidden {
     display: none;
+}
+.hiddenVisibility {
+	visibility: hidden;
 }

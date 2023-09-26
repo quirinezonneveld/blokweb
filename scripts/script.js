@@ -26,6 +26,23 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
 
 
 
+// hamburgermenu
+let hamburgermenuButton = document.querySelector('header nav ul:first-of-type li:first-of-type');
+let hamburgermenuBovenkant = document.querySelector('header nav ul:nth-of-type(2)');
+let hamburgermenuOnderkant = document.querySelector('footer > ul:last-of-type');
+
+hamburgermenuBovenkant.classList.add('hiddenVisibility');
+hamburgermenuOnderkant.classList.add('hiddenVisibility');
+
+function openHamburgermenu() {
+    hamburgermenuBovenkant.classList.remove('hiddenVisibility');
+    hamburgermenuOnderkant.classList.remove('hiddenVisibility');
+};
+hamburgermenuButton.addEventListener('click', openHamburgermenu);
+
+
+
+
 
 
 // herfst bij dille: koken met krachtige kruiden
