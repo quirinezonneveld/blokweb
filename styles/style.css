@@ -58,6 +58,23 @@ h2 {
 	font-family: var(--font-headers);
 }
 
+
+main > button:last-of-type img {
+	background-color: #97B17E;
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 100%;
+	bottom: 1.5em;
+	right: 1.5em;
+	z-index: 100;
+	position: fixed;
+	border: solid #97B17E 0.9em;
+}
+main > button:last-of-type {
+	border: none;
+}
+
+
 /* navigatie melding*/
 header div:first-of-type {
 	display: grid;
@@ -77,7 +94,7 @@ header div:first-of-type p {
 	font-weight: 300;
 }
 .navigatieVerschijn {
-	animation: verschijn 2s ease;
+	animation: verschijn 3s ease;
 }
 @keyframes verschijn {
     0% {opacity: 0;}
@@ -270,10 +287,17 @@ main section:nth-of-type(1) {
 	background: var(--color-background2);
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1em;
+	/* gap: 1em; */
 	justify-content: center;
 	padding-top: 3.5em;
-	padding-bottom: 3.2em;
+	/* padding-bottom: 3.2em; */
+}
+main section:nth-of-type(1) h1 {
+	margin-top: 2em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	font-size: 1.2em;
 }
 main section:nth-of-type(1) a {
 	background: var(--color-background);
@@ -316,6 +340,7 @@ main section:nth-of-type(1) h2 {
 	grid-template-rows: 1fr 1fr 2em;
 	grid-gap: 0.5em;
 	background: var(--color-background2);
+	padding-top: 3.2em;
 }
 .krachtigeKruiden p:first-child {
 	font-weight: 800;
@@ -802,7 +827,12 @@ footer section:last-of-type span {
 .backgroundTheepot {
 	background-color: var(--color-background2);
 }
+.backgroundTheepot section:first-of-type {
+	padding-top: 0;
+}
 
+
+/* breadcrumbs */
 .breadcrumbs {
 	display: flex;
 	height: 2em;
@@ -859,6 +889,22 @@ section:nth-child(1) button {
 section:nth-child(1) button img {
 	width: 2em;
 }
+section:nth-child(1) div {
+	display: flex;
+	width: 100%;
+	transform: translateY(-3em);
+	justify-content: space-between;
+  	align-items: center;
+}
+section:nth-child(1) input:first-of-type {
+	margin-left: 2em;
+}
+section:nth-child(1) div img {
+	margin-right: 2em;
+	margin-left: 19em;
+}
+
+
 
 
 /* dropdowns productinformatie & specificaties */
@@ -931,10 +977,14 @@ section:nth-child(1) button img {
 	background-color: var(--color-background2);
 	scroll-behavior: smooth;
 	gap: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+
 }
 
 .aanbevolen ul a {
 	text-decoration: none;
+	width: 7em;
 }
 .aanbevolen ul article {
 	color: var(--color-text);
@@ -942,6 +992,7 @@ section:nth-child(1) button img {
 	flex-direction: column;
 	gap: 1.5em;
 	padding-bottom: 1em;
+	width: 9em;
 }
 .aanbevolen ul li {
 	list-style-type: none;
@@ -984,6 +1035,62 @@ section:nth-child(1) button img {
    https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
 
 
+
+
+/* in winkelmandje */
+.backgroundTheepot > ul:first-of-type {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	align-items: center;
+}
+.backgroundTheepot > ul:first-of-type li select, .backgroundTheepot > ul:first-of-type li:nth-of-type(2) button, .backgroundTheepot > ul:first-of-type li button img {
+	height: 4em;
+}
+.backgroundTheepot > ul:first-of-type li button {
+	border: solid lightgrey 0.1em;
+}
+
+.backgroundTheepot > ul:first-of-type li select {
+	width: 5em;
+	padding-left: 1.5em;
+	
+}
+.backgroundTheepot > ul:first-of-type li:nth-of-type(2) button {
+	background-color: var(--button-background);
+	color: var(--button-text-color);
+	padding: 0.1em 0.5em;
+	font-family: var(--font-headers);
+	font-size: var(--button-font-size);
+	height: 3em;
+}
+.backgroundTheepot > ul:first-of-type li:last-of-type button {
+	background-color: transparent;
+}
+
+.backgroundTheepot > ul:nth-of-type(2) {
+	list-style-type: '✓';
+	/* margin-left: 2em; */
+	padding: 1.5em;
+}
+
+.backgroundTheepot > ul:first-of-type li button img {
+	padding: 0.5em;
+	background-color: white;
+}
+
+.backgroundTheepot > a:first-of-type {
+	margin-left: 1em;
+	color: var(--color-text);
+}
+
+
+/* prijs en voorraad */
+.backgroundTheepot > div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+	margin: 1em 1em;
+}
 
 
 

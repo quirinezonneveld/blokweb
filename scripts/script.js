@@ -34,7 +34,7 @@ async function updateAndRemove() {
 
 if (navigatieMelding) {
     updateAndRemove();
-    setInterval(updateAndRemove, 3000);
+    setInterval(updateAndRemove, 4000);
 
 }
 
@@ -110,6 +110,33 @@ if (arrowLeftInstagram && arrowRightInstagram) {
 
 //theepot
 let scrollContainerTheepot = document.querySelector('section:nth-child(1) ul');
+let buttonTheepot = document.querySelector('section:nth-child(1) div button img');
+let radioButtonLeft = document.querySelector('section:nth-child(1) input:first-of-type');
+let radioButtonRight = document.querySelector('section:nth-child(1) input:last-of-type');
+
+if (scrollContainerTheepot) {
+    radioButtonLeft.addEventListener('click', function(){
+        scrollContainerTheepot.scrollLeft -= 375;
+    });
+    radioButtonRight.addEventListener('click', function(){
+        scrollContainerTheepot.scrollLeft += 375;
+    });
+
+    buttonTheepot.addEventListener('click', function(){
+        console.log('Button geklikt');
+        // (buttonTheepot.src === "images/iconArrow3.png") {
+            scrollContainerTheepot.scrollLeft += 375;
+            buttonTheepot.src = "images/iconArrow3Left.png";
+        // } else {
+        //     scrollContainerTheepot.scrollLeft -= 375;
+        //     buttonTheepot.src = "images/iconArrow3.png";
+        // }
+    });
+
+}
+
+
+
 
 
 
@@ -124,8 +151,8 @@ let productinformatie = document.querySelectorAll('.theepotDropdown li p');
 let specificaties = document.querySelectorAll('.theepotDropdown li div ul');
 
 
-
-if (productinformatie && specificaties) {
+console.log(window.location.pathname);
+if (window.location.pathname === '/theepot.html') {
     // productinformatie.classList.add('hidden');
 
     productinformatie.forEach(function(p) {
