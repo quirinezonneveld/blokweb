@@ -110,45 +110,57 @@ if (arrowLeftInstagram && arrowRightInstagram) {
 
 //theepot
 let scrollContainerTheepot = document.querySelector('section:nth-child(1) ul');
+
+
+
+
+// dropdowns productinformatie & specificaties
 let buttonProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button');
 let iconProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button img');
 let buttonSpecificaties = document.querySelector('.theepotDropdown li:last-of-type button');
 let iconSpecificaties = document.querySelector('.theepotDropdown li:last-of-type button img');
 
-let productinformatie = document.querySelector('.theepotDropdown li p');
-let specificaties = document.querySelector('.theepotDropdown li div');
+let productinformatie = document.querySelectorAll('.theepotDropdown li p');
+let specificaties = document.querySelectorAll('.theepotDropdown li div ul');
+
 
 
 if (productinformatie && specificaties) {
-    productinformatie.classList.add('hidden');
-    specificaties.classList.add('hidden');
+    // productinformatie.classList.add('hidden');
+
+    productinformatie.forEach(function(p) {
+        p.classList.add('hidden');
+    });
+    
+    specificaties.forEach(function(ul) {
+        ul.classList.add('hidden');
+    });
 
     function openProductinformatieTheepot() {
-        productinformatie.classList.toggle('hidden');
 
-        if (productinformatie.classList.contains('hidden')) {
-            iconProductinformatie.src = "images/iconAdd.svg";
-        } else {
-            iconProductinformatie.src = "images/iconStripe.svg";
-        }
+        productinformatie.forEach(function(p) {
+            p.classList.toggle('hidden');
+        });
+
     };
     buttonProductinformatie.addEventListener('click', openProductinformatieTheepot);
 
-    function openSpecificatiesTheepot() {
-        specificaties.classList.toggle('hidden');
 
-        if (specificaties.classList.contains('hidden')) {
-            iconSpecificaties.src = "images/iconAdd.svg";
-        } else {
-            iconSpecificaties.src = "images/iconStripe.svg";
-        }
+    function openSpecificatiesTheepot() {
+        specificaties.forEach(function(ul) {
+            ul.classList.toggle('hidden');
+        });
     };
     buttonSpecificaties.addEventListener('click', openSpecificatiesTheepot);
 }
 
 
 
-
+// if (productinformatie.classList.contains('hidden')) {
+        //     iconProductinformatie.src = "images/iconAdd.svg";
+        // } else {
+        //     iconProductinformatie.src = "images/iconStripe.svg";
+        // }
 
 
 
@@ -160,21 +172,56 @@ if (productinformatie && specificaties) {
 /* footer */
 /**********/
 
-/* service, over ons & inspiratie */
-let informationButtons = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li button');
-let informationUls = document.querySelectorAll('footer section:nth-of-type(3) ul:first-of-type li ul');
+/* dropdowns: service, over ons & inspiratie */
+let buttonService = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:first-of-type button');
+let iconService = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:first-of-type button img');
+let service = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:first-of-type ul');
 
+let buttonOverOns = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:nth-of-type(2) button');
+let iconOverOns = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:nth-of-type(2) button img');
+let overOns = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:nth-of-type(2) ul');
 
-informationUls.forEach(function(ul) {
-    ul.classList.add('hidden');
-});
+let buttonInspiratie = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:last-of-type button');
+let iconInspiratie = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:last-of-type button img');
+let inspiratie = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:last-of-type ul');
 
+service.classList.add('hidden');
+overOns.classList.add('hidden');
+inspiratie.classList.add('hidden');
 
-informationButtons.forEach(function(button, index) {
-    button.addEventListener('click', function(){
-        informationUls[index].classList.toggle('hidden');
-    });
-});
+function openService() {
+    service.classList.toggle('hidden');
+
+    if (service.classList.contains('hidden')) {
+        iconService.src = "images/iconAdd.svg";
+    } else {
+        iconService.src = "images/iconStripe.svg";
+    }
+};
+buttonService.addEventListener('click', openService);
+
+function openOverOns() {
+    overOns.classList.toggle('hidden');
+
+    if (overOns.classList.contains('hidden')) {
+        iconOverOns.src = "images/iconAdd.svg";
+    } else {
+        iconOverOns.src = "images/iconStripe.svg";
+    }
+};
+buttonOverOns.addEventListener('click', openOverOns);
+
+function openInspiratie() {
+    inspiratie.classList.toggle('hidden');
+
+    if (inspiratie.classList.contains('hidden')) {
+        iconInspiratie.src = "images/iconAdd.svg";
+    } else {
+        iconInspiratie.src = "images/iconStripe.svg";
+    }
+};
+buttonInspiratie.addEventListener('click', openInspiratie);
+
 
 
 

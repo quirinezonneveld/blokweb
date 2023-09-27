@@ -310,34 +310,34 @@ main section:nth-of-type(1) h2 {
 .krachtigeKruiden {
 	padding-bottom: 20em;
 }
-main section:nth-of-type(2) div:nth-of-type(1) {
+.krachtigeKruiden div:nth-of-type(1) {
 	display: grid;
 	grid-template-columns: 0.5em 8fr 1fr 1fr 0.5em;
 	grid-template-rows: 1fr 1fr 2em;
 	grid-gap: 0.5em;
 	background: var(--color-background2);
 }
-main section:nth-of-type(2) p:first-child {
+.krachtigeKruiden p:first-child {
 	font-weight: 800;
 	padding: 0;
 	grid-column-start: 2;
 	align-self: end;
 }
-main section:nth-of-type(2) h2 {
+.krachtigeKruiden h2 {
 	grid-column-start: 2;
 	grid-row-start: 2;
 }
-main section:nth-of-type(2) button {
+.krachtigeKruiden button {
 	align-self: end;
 	border: none;
 	background-color: transparent;
 }
-main section:nth-of-type(2) button:first-of-type {
+.krachtigeKruiden button:first-of-type {
 	grid-column-start: 3;
 	grid-row-start: 2;
 	transform: scaleX(-1);
 }
-main section:nth-of-type(2) button:last-of-type {
+.krachtigeKruiden button:last-of-type {
 	grid-column-start: 4;
 	grid-row-start: 2;
 }
@@ -345,47 +345,45 @@ main section:nth-of-type(2) button:last-of-type {
 https://css-tricks.com/snippets/css/flip-an-image/ */
 
 
-
-main section:nth-of-type(2) ul {
+.krachtigeKruiden ul {
 	display: flex;
 	overflow-x: auto;
 	background-color: var(--color-background2);
 	scroll-behavior: smooth;
 	gap: 1em;
 }
-main section:nth-of-type(2) ul::-webkit-scrollbar {
+.krachtigeKruiden ul::-webkit-scrollbar {
 	display: none;
 }
 
 
-main section:nth-of-type(2) ul li {
+.krachtigeKruiden ul li {
 	background-color: var(--color-background);
-	/* transform: translateX(-4em); */
 	list-style-type: none;
 	position: relative;
 	z-index: 2;
 }
-main section:nth-of-type(2) ul a {
+.krachtigeKruiden ul a {
 	text-decoration: none;
 }
-main section:nth-of-type(2) ul img {
+.krachtigeKruiden ul img {
 	width: 10em;
 }
-main section:nth-of-type(2) ul a article h3 {
+.krachtigeKruiden ul a article h3 {
 	font-family: var(--font-main);
 	font-size: 0.8em;
 	font-weight: 500;
 	color: var(--color-text);
 	padding: 1em 1em 1em 1em;
 }
-main section:nth-of-type(2) ul a article p {
+.krachtigeKruiden ul a article p {
 	font-size: 0.8em;
 	font-weight: 800;
 	color: var(--color-text);
 	padding: 1em;
 }
 
-main section:nth-of-type(2) img:nth-child(3) {
+.krachtigeKruiden img:nth-child(3) {
 	position: absolute;
 	width: 100%;
 	transform: translateY(-10em);
@@ -801,6 +799,10 @@ footer section:last-of-type span {
 /* theepot page */
 /****************/
 
+.backgroundTheepot {
+	background-color: var(--color-background2);
+}
+
 .breadcrumbs {
 	display: flex;
 	height: 2em;
@@ -850,10 +852,6 @@ section:nth-child(1) ul img {
 }
 
 
-/* section:nth-child(1) div {
-	display: flex;
-} */
-
 section:nth-child(1) button {
 	border: none;
 	background-color: transparent;
@@ -863,11 +861,14 @@ section:nth-child(1) button img {
 }
 
 
-/* .theepotDropdown li {
-
-
-} */
-
+/* dropdowns productinformatie & specificaties */
+.theepotDropdown {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+.theepotDropdown li {
+	list-style-type: none;
+}
 .theepotDropdown button {
 	display: flex;
 	justify-content: space-between;
@@ -881,6 +882,12 @@ section:nth-child(1) button img {
 	padding-bottom: 1em;
 	border-bottom: solid lightgrey 0.08em;
 }
+.theepotDropdown li:first-of-type {
+	margin-top: 2em;
+}
+.theepotDropdown li:last-of-type {
+	margin-bottom: 8em;
+}
 .theepotDropdown button img {
 	align-items: end;
 	justify-content: end;
@@ -889,10 +896,94 @@ section:nth-child(1) button img {
 }
 
 
-.theepotDropdown li p, .theepotDropdown li div {
+.theepotDropdown li p {
 	position: relative;
-	/* display: none; */
+	line-height: 2em;
+	margin-bottom: 2em;
 }
+.theepotDropdown li div {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+.theepotDropdown li div ul {
+	list-style-type: none;
+}
+.theepotDropdown li div ul:first-of-type {
+	font-weight: 600;
+}
+
+
+
+/* aanbevolen voor jou */
+.aanbevolen div {
+	display: flex;
+	justify-content: space-between;
+	/* width: 100%; */
+}
+.aanbevolen ul::-webkit-scrollbar {
+	display: none;
+}
+
+.aanbevolen ul {
+	display: flex;
+	overflow-x: auto;
+	background-color: var(--color-background2);
+	scroll-behavior: smooth;
+	gap: 1em;
+}
+
+.aanbevolen ul a {
+	text-decoration: none;
+}
+.aanbevolen ul article {
+	color: var(--color-text);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	padding-bottom: 1em;
+}
+.aanbevolen ul li {
+	list-style-type: none;
+	background-color: var(--color-background);
+	margin-bottom: 6em;
+}
+.aanbevolen ul article h4 {
+	font-family: var(--font-main);
+	font-size: 0.8em;
+	font-weight: 500;
+	color: var(--color-text);
+	padding: 1em 1em 1em 1em;
+}
+.aanbevolen ul a article p {
+	font-size: 0.8em;
+	font-weight: 800;
+	color: var(--color-text);
+	padding: 1em;
+}
+
+/* aanbevolen arrows */
+.aanbevolen button {
+	border: none;
+	background-color: transparent;
+}
+.aanbevolen button img {
+	width: 2.5em;
+	padding: 0.5em;
+	transform: translateY(13em);
+	background-color: var(--color-background);
+	border: solid var(--button-background) 0.1em;
+}
+.aanbevolen button:first-of-type {
+	transform: scaleX(-1);
+}
+.aanbevolen button:last-of-type img {
+	filter: invert(100%);
+}
+/* filter: 
+   https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
+
+
 
 
 
