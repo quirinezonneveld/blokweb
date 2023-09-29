@@ -26,6 +26,8 @@
 	--color-background4: #606e5a;
 	--color-background5: #E0E5D7;
 
+	--color-background-navigatie: white;
+
 	--font-main: "Gill Sans MT",sans-serif;
 	--font-headers: 'Courier New', Courier, monospace;
 
@@ -36,7 +38,23 @@
 	--button-font-size: 1.2em;
 	--button-padding: 0.7em 1em 0.7em 1em;
 }
+@media(prefers-color-scheme:dark) {
+	:root {
+		--color-text: white;
+		--color-text2: black;
 
+		--color-background: rgb(37, 37, 37);
+		--color-background2: #4f4e49;
+		--color-background3: #504b37;
+		--color-background4: #2a3524;
+		--color-background5: #595e55;
+
+		--color-background-navigatie: rgb(58, 58, 58);
+
+		--button-background: black;
+		--button-text-color: white;
+	}
+}
 
 
 
@@ -47,6 +65,10 @@
 
 body {
 	font-family: var(--font-main);
+	color: var(--color-text);
+}
+header {
+	background-color: var(--color-background-navigatie);
 }
 
 h1 {
@@ -58,6 +80,12 @@ h2 {
 	font-family: var(--font-headers);
 }
 
+main {
+	background-color: var(--color-background-navigatie);
+}
+footer {
+	background-color: var(--color-background-navigatie);
+}
 
 main > button:last-of-type img {
 	background-color: #97B17E;
@@ -90,7 +118,7 @@ header div:first-of-type img {
 header div:first-of-type p {
 	grid-column-start: 4;
 	font-size: 0.8em;
-	color: var(--color-text2);
+	color: white;
 	font-weight: 300;
 }
 .navigatieVerschijn {
@@ -109,6 +137,7 @@ header nav ul:nth-of-type(1) {
 	justify-content: space-around;
 	text-align: center;
 	align-items: center;
+	background-color: var(--color-background-navigatie);
 }
 header nav ul:nth-of-type(1) li img {
 	width: 1.7em;
@@ -138,15 +167,16 @@ header nav ul:nth-of-type(2) {
 	overflow-y: auto;
 	z-index: 20;
 	position: absolute;
+	list-style-type: none;
 	/* visibility: hidden; */
 }
-header nav ul:nth-of-type(2) li {
+header nav ul:nth-of-type(2) li a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-header nav ul:nth-of-type(2) li button {
+/* header nav ul:nth-of-type(2) li button {
 	display: flex;
 	border: none;
 	justify-content: space-between;
@@ -154,7 +184,7 @@ header nav ul:nth-of-type(2) li button {
 	width: 100%;
 	font-size: 1em;
 	align-items: center;
-}
+} */
 
 header nav ul:nth-of-type(2) li a {
 	font-family: var(--font-headers);
@@ -228,10 +258,11 @@ header div:nth-of-type(2) {
 	margin-bottom: 0.8em;
 	padding: 0.3em 1em 0.3em 1em;
 	gap: 1em;
+	background-color: var(--color-background-navigatie);
 }
 header div:nth-of-type(2) > * {
 	border: none;
-	background-color: var(--color-background);
+	/* background-color: var(--color-background); */
 }
 header div:nth-of-type(2) button {
 	scale: 0.8;
@@ -240,6 +271,7 @@ header div:nth-of-type(2) input {
 	font-size: var(--font-size-main);
 	width: 100%;
 	cursor: text;
+	background-color: var(--color-background-navigatie);
 }
 /* Cursor:
    https://developer.mozilla.org/en-US/docs/Web/CSS/cursor  */
@@ -287,7 +319,7 @@ main section:nth-of-type(1) {
 	background: var(--color-background2);
 	display: flex;
 	flex-wrap: wrap;
-	/* gap: 1em; */
+	gap: 1em;
 	justify-content: center;
 	padding-top: 3.5em;
 	/* padding-bottom: 3.2em; */
@@ -619,7 +651,7 @@ footer section:first-of-type div a {
 footer section:nth-of-type(2) {
 	background-color: var(--color-background4);
 	display: grid;
-	color: var(--color-text2);
+	color: white;
 	gap: 2em;
 	padding: 1em 0em 6em 1em;
 }
@@ -632,14 +664,14 @@ footer section:nth-of-type(2) div img {
 	height: 1.6em;
 }
 footer section:nth-of-type(2) a {
-	color: var(--color-text2);
+	color: white;
 }
 
 
 
 /* gegevens */
 footer section:nth-of-type(3) {
-	margin: 4em 1em 3em 1em;
+	padding: 4em 1em 3em 1em;
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
@@ -683,6 +715,7 @@ footer section:nth-of-type(3) ul:first-of-type button {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	border-bottom: solid lightgrey 0.08em;
+	color: var(--color-text);
 }
 footer section:nth-of-type(3) ul:first-of-type img {
 	align-items: end;
@@ -962,6 +995,9 @@ section:nth-child(1) div img {
 
 
 /* aanbevolen voor jou */
+.aanbevolen h2 {
+	margin-left: 0.8em;
+}
 .aanbevolen div {
 	display: flex;
 	justify-content: space-between;

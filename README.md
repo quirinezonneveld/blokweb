@@ -247,8 +247,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Position sticky: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+  2. Adress: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
+  3. Select: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select 
+  4. Transform: translate(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform 
+  5. Flip an image: https://css-tricks.com/snippets/css/flip-an-image/ 
+  6. List-style-type: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+  7. TextContent: https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent  
+  8. Input type="search”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search 
+  9. Image galary: https://www.youtube.com/watch?v=gzXyRa7jwk4 
+  10. Box-shadow: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  11. Fit-content: https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content 
+  12. ForEach: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach 
+  13. Closest(): https://www.w3schools.com/jsref/met_element_closest.asp 
+  14. GetAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute 
+  15. SetAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute 
+  16. input type="radio”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio 
+  17. Cursor: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor 
+  18. Filter: https://developer.mozilla.org/en-US/docs/Web/CSS/filter 
 
 </details>
