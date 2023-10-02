@@ -41,20 +41,20 @@
 @media(prefers-color-scheme:dark) {
 	:root {
 		--color-text: white;
-	--color-text2: black;
+		--color-text2: black;
 
-	--color-background: rgb(33, 33, 33);
-	--color-background2: #60450e;
-	--color-background3: #504b37;
-	--color-background4: #34482a;
-	--color-background5: #595e55;
+		--color-background: rgb(33, 33, 33);
+		--color-background2: #60450e;
+		--color-background3: #504b37;
+		--color-background4: #34482a;
+		--color-background5: #595e55;
 
-	--color-background-navigatie: rgb(0, 0, 0);
+		--color-background-navigatie: rgb(0, 0, 0);
 
-	--button-background: black;
-	--button-text-color: white;
-
+		--button-background: black;
+		--button-text-color: white;
 	}
+
 	.darkmode nav img, .darkmode header div:nth-of-type(2) img, .darkmode main section:nth-of-type(2) button, .darkmode footer section:nth-of-type(3) div img, .darkmode footer section:nth-of-type(3) ul:nth-of-type(3) img, .darkmode .theepotDropdown button img {
 		filter: invert(100%);
 	}
@@ -76,6 +76,28 @@
 }
 .darkmode nav img, .darkmode header div:nth-of-type(2) img, .darkmode main section:nth-of-type(2) button, .darkmode footer section:nth-of-type(3) div img, .darkmode footer section:nth-of-type(3) ul:nth-of-type(3) img, .darkmode .theepotDropdown button img {
 	filter: invert(100%);
+}
+
+
+.fallTheme {
+	--color-text: black;
+	--color-text2: white;
+
+	--color-background: rgb(227, 184, 110);
+	--color-background2: #c97010;
+	--color-background3: #df8f26;
+	--color-background4: #b47016;;
+	--color-background5: #c0654d;
+
+	--color-background-navigatie: rgb(255, 255, 255);
+
+	--button-background: rgb(93, 26, 26);
+	--button-text-color: white;
+}
+
+
+.largetext {
+	--button-font-size: 1.5em;
 }
 
 
@@ -304,6 +326,7 @@ footer > ul:last-of-type li:last-of-type button {
 	background-color: transparent;
 	align-items: center;
 	gap: 0.5em;
+	color: var(--color-text);
 }
 footer > ul:last-of-type li:last-of-type img {
 	height: 1em;
@@ -411,6 +434,7 @@ main section:nth-of-type(1) a h3 {
 	font-family: var(--font-headers);
 	color: var(--color-text);
 	border-bottom: solid var(--color-text) 0.1em;
+	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	margin-bottom: 0.5em;
 }
@@ -898,8 +922,6 @@ footer section:nth-of-type(3) ul:nth-of-type(4) li a {
 
 
 
-
-
 /* certificaten */
 footer section:nth-of-type(3) ul:nth-of-type(5) {
 	display: flex;
@@ -908,8 +930,10 @@ footer section:nth-of-type(3) ul:nth-of-type(5) {
 	gap: 1.5em;
 
 	padding-top: 1em;
+	padding-bottom: 1em;
 	border-top: solid lightgrey 0.1em;
 	align-items: center;
+	background-color: white;
 }
 footer section:nth-of-type(3) ul:nth-of-type(5) li img {
 	height: 2em;

@@ -72,9 +72,13 @@ hamburgermenuButton.addEventListener('click', openHamburgermenu);
 // settings 
 let settingsButton = document.querySelector('main > ul:last-of-type > li:first-of-type > button');
 let settingsUl = document.querySelector('main > ul:last-of-type li:first-of-type ul');
+let root = document.querySelector(':root');
+
 let darklightModeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button');
 let darklightModeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button img');
-let root = document.querySelector(':root');
+
+let fallThemeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button');
+
 
 settingsUl.classList.add('hidden');
 
@@ -94,6 +98,12 @@ darklightModeButton.addEventListener('click', function() {
   } else {
     darklightModeImg.src= "images/darkmode.png";
   }
+});
+
+
+// fall theme
+fallThemeButton.addEventListener('click', function() {
+    root.classList.toggle('fallTheme');
 });
 
 
