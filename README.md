@@ -265,5 +265,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   16. input type="radio”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio 
   17. Cursor: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor 
   18. Filter: https://developer.mozilla.org/en-US/docs/Web/CSS/filter 
+  19. scroll-behavior: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+  20. scroll-snap-type: https://www.youtube.com/watch?v=Xc6G3oV24yE
+  21. darklight-mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
 
 </details>

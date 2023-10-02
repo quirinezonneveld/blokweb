@@ -41,27 +41,52 @@
 @media(prefers-color-scheme:dark) {
 	:root {
 		--color-text: white;
-		--color-text2: black;
+	--color-text2: black;
 
-		--color-background: rgb(37, 37, 37);
-		--color-background2: #4f4e49;
-		--color-background3: #504b37;
-		--color-background4: #2a3524;
-		--color-background5: #595e55;
+	--color-background: rgb(33, 33, 33);
+	--color-background2: #60450e;
+	--color-background3: #504b37;
+	--color-background4: #34482a;
+	--color-background5: #595e55;
 
-		--color-background-navigatie: rgb(58, 58, 58);
+	--color-background-navigatie: rgb(0, 0, 0);
 
-		--button-background: black;
-		--button-text-color: white;
+	--button-background: black;
+	--button-text-color: white;
+
+	}
+	.darkmode nav img, .darkmode header div:nth-of-type(2) img, .darkmode main section:nth-of-type(2) button, .darkmode footer section:nth-of-type(3) div img, .darkmode footer section:nth-of-type(3) ul:nth-of-type(3) img, .darkmode .theepotDropdown button img {
+		filter: invert(100%);
 	}
 }
+.darkmode {
+	--color-text: white;
+	--color-text2: black;
 
+	--color-background: rgb(33, 33, 33);
+	--color-background2: #60450e;
+	--color-background3: #504b37;
+	--color-background4: #34482a;
+	--color-background5: #595e55;
 
+	--color-background-navigatie: rgb(0, 0, 0);
+
+	--button-background: black;
+	--button-text-color: white;
+}
+.darkmode nav img, .darkmode header div:nth-of-type(2) img, .darkmode main section:nth-of-type(2) button, .darkmode footer section:nth-of-type(3) div img, .darkmode footer section:nth-of-type(3) ul:nth-of-type(3) img, .darkmode .theepotDropdown button img {
+	filter: invert(100%);
+}
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
+html {
+    scroll-behavior: smooth;
+}
+/* scroll-behavior: 
+	https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior */
 
 body {
 	font-family: var(--font-main);
@@ -87,23 +112,54 @@ footer {
 	background-color: var(--color-background-navigatie);
 }
 
-main > button:last-of-type img {
-	background-color: #97B17E;
+
+/* klantenservice & settings */
+main > ul:last-of-type {
+	display: flex;
+	flex-direction: column;
+	bottom: 1.5em;
+	right: 1.5em;
+	z-index: 50;
+	position: fixed;
+	list-style-type: none;
+	gap: 1em;
+}
+main > ul:last-of-type li:first-of-type {
+	border-radius: 3em;
+	background-color: lightgrey;
+}
+main > ul:last-of-type li:first-of-type ul {
+	list-style-type: none;
+}
+main > ul:last-of-type li img {
 	width: 3.5em;
 	height: 3.5em;
 	border-radius: 100%;
-	bottom: 1.5em;
-	right: 1.5em;
-	z-index: 100;
-	position: fixed;
+}
+main > ul:last-of-type > li > button img {
 	border: solid #97B17E 0.9em;
+	background-color: #97B17E;
 }
-main > button:last-of-type {
+main > ul:last-of-type > li ul li img {
+	border: solid lightgrey 0.9em;
+}
+/* main > ul:last-of-type li:first-of-type ul {
+	display: none;
+} */
+main > ul:last-of-type li button {
 	border: none;
+	background-color: transparent;
 }
 
+/* main > ul:last-of-type li:first-of-type ul li:first-of-type button {
+	background-color: red;
+} */
 
-/* navigatie melding*/
+
+
+
+
+/* navigatie melding */
 header div:first-of-type {
 	display: grid;
 	grid-template-columns: 4.5em 1em 0.5em 1fr;
@@ -131,6 +187,12 @@ header div:first-of-type p {
 
 
 /* navigatie */
+header nav {
+	position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 header nav ul:nth-of-type(1) {
 	display: flex;
 	list-style-type: none;
@@ -226,7 +288,7 @@ footer > ul:last-of-type {
 	align-items: center;
 	background-color: var(--color-background2);
 	top: 30em;
-	padding-top: 2em;
+	padding-top: 3em;
 	padding-bottom: 13em;
 	position: absolute;
 	width: 100%;
@@ -252,7 +314,7 @@ footer > ul:last-of-type li:last-of-type img {
 /* zoekbalk */
 header div:nth-of-type(2) {
 	display: flex;
-	border: solid lightgrey 0.05em;
+	border: solid lightgrey 0.1em;
 	margin-left: 1.5em;
 	margin-right: 1.5em;
 	margin-bottom: 0.8em;
@@ -264,8 +326,12 @@ header div:nth-of-type(2) > * {
 	border: none;
 	/* background-color: var(--color-background); */
 }
+header div:nth-of-type(2) img {
+	width: 2em;
+	background: transparent;
+}
 header div:nth-of-type(2) button {
-	scale: 0.8;
+	background: transparent;
 }
 header div:nth-of-type(2) input {
 	font-size: var(--font-size-main);
@@ -528,7 +594,13 @@ main section:nth-of-type(4) ul:nth-of-type(1) {
 	gap: 5em;
 	list-style-type: none;
 	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
 }
+main section:nth-of-type(4) ul:nth-of-type(1) li {
+	scroll-snap-align: center;
+}
+/* scroll-snap-type:
+https://www.youtube.com/watch?v=Xc6G3oV24yE */
 main section:nth-of-type(4) ul:nth-of-type(1)::-webkit-scrollbar {
 	display: none;
 }
@@ -551,6 +623,7 @@ main section:nth-of-type(4) ul:last-of-type {
 	display: flex;
 	width: 100%;
 	list-style-type: none;
+	padding-top: 1em;
 	justify-content: center;
 	gap: 1em;
 }
@@ -781,6 +854,7 @@ footer section:nth-of-type(3) ul:nth-of-type(2) li button {
 	align-items: center;
 	margin-bottom: 0.5em;
 	width: 100%;
+	color: var(--color-text);
 }
 
 
@@ -952,6 +1026,7 @@ section:nth-child(1) div img {
 	display: flex;
 	justify-content: space-between;
 	background-color: transparent;
+	color: var(--color-text);
 	border: none;
 	width: 100%;
 	font-family: var(--font-headers);

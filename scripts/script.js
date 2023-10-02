@@ -49,6 +49,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
 let hamburgermenuButton = document.querySelector('header nav ul:first-of-type li:first-of-type');
 let hamburgermenuBovenkant = document.querySelector('header nav ul:nth-of-type(2)');
 let hamburgermenuOnderkant = document.querySelector('footer > ul:last-of-type');
+let fixedButtons = document.querySelector('main > ul:last-of-type');
 
 
 
@@ -59,6 +60,7 @@ hamburgermenuOnderkant.classList.add('hiddenVisibility');
 function openHamburgermenu() {
     hamburgermenuBovenkant.classList.remove('hiddenVisibility');
     hamburgermenuOnderkant.classList.remove('hiddenVisibility');
+    fixedButtons.classList.add('hiddenVisibility');
 };
 
 hamburgermenuButton.addEventListener('click', openHamburgermenu);
@@ -66,6 +68,33 @@ hamburgermenuButton.addEventListener('click', openHamburgermenu);
 
 
 
+
+// settings 
+let settingsButton = document.querySelector('main > ul:last-of-type > li:first-of-type > button');
+let settingsUl = document.querySelector('main > ul:last-of-type li:first-of-type ul');
+let darklightModeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button');
+let darklightModeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button img');
+let root = document.querySelector(':root');
+
+settingsUl.classList.add('hidden');
+
+function openSettings() {
+    settingsUl.classList.toggle('hidden');
+    console.log('open settings')
+};
+settingsButton.addEventListener('click', openSettings);
+
+
+// darklight mode
+darklightModeButton.addEventListener('click', function() {
+  root.classList.toggle('darkmode');
+
+  if (darklightModeImg.src.includes("darkmode.png")) {
+    darklightModeImg.src= "images/lightmode.png";
+  } else {
+    darklightModeImg.src= "images/darkmode.png";
+  }
+});
 
 
 
