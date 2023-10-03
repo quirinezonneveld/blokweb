@@ -32,6 +32,11 @@
 	--font-headers: 'Courier New', Courier, monospace;
 
 	--font-size-main: 1em;
+	--font-size-small: 0.8em;
+	--font-size-mainMedium: 1.2em;
+	--font-size-medium: 1.3em;
+	--font-size-large: 2em;
+
 
 	--button-background: black;
 	--button-text-color: white;
@@ -87,7 +92,7 @@
 	--color-background2: #c97010;
 	--color-background3: #df8f26;
 	--color-background4: #b47016;;
-	--color-background5: #c0654d;
+	--color-background5: #ce9169;
 
 	--color-background-navigatie: rgb(255, 255, 255);
 
@@ -96,9 +101,17 @@
 }
 
 
-.largetext {
-	--button-font-size: 1.5em;
+.largeText {
+	--font-size-main: 1.3em;
+	--font-size-small: 1em;
+	--font-size-mainMedium: 1.6em;
+	--font-size-medium: 1.8em;
+	--font-size-large: 2.2em;
+
+	--button-font-size: 1.3em;
 }
+
+
 
 
 /****************/
@@ -120,7 +133,7 @@ header {
 
 h1 {
 	font-family: var(--font-headers);
-	font-size: 2em;
+	font-size: var(--font-size-large);
 }
 
 h2 {
@@ -133,6 +146,25 @@ main {
 footer {
 	background-color: var(--color-background-navigatie);
 }
+
+
+/* skip to content */
+header > a:first-of-type {
+	background-color: rgb(185, 185, 185);
+	color: black;
+	position: absolute;
+	padding: 0.1em 7.15em;
+	transform: translateY(-120%);
+	transition: transform 325ms ease-in;
+	z-index: 2;
+}
+header > a:first-of-type:focus {
+	transform: translateY(0);
+	position: relative;
+}
+
+
+
 
 
 /* klantenservice & settings */
@@ -195,7 +227,7 @@ header div:first-of-type img {
 }
 header div:first-of-type p {
 	grid-column-start: 4;
-	font-size: 0.8em;
+	font-size: var(--font-size-small);
 	color: white;
 	font-weight: 300;
 }
@@ -266,7 +298,7 @@ header nav ul:nth-of-type(2) li a {
 	justify-content: space-between;
 	background-color: transparent;
 	width: 100%;
-	font-size: 1em;
+	font-size: var(--font-main);
 	align-items: center;
 } */
 
@@ -274,7 +306,7 @@ header nav ul:nth-of-type(2) li a {
 	font-family: var(--font-headers);
 	text-decoration: none;
 	color: var(--color-text);
-	font-size: 1.32em;
+	font-size: var(--font-size-medium);
 }
 
 header nav ul:nth-of-type(2) li img {
@@ -397,6 +429,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
 	width: fit-content;
 	padding: 0;
 	font-weight: 600;
+	font-size: var(--font-size-main);
 }
 
 /************/
@@ -418,7 +451,7 @@ main section:nth-of-type(1) h1 {
 	margin-right: 1em;
 	margin-bottom: 1em;
 	margin-left: 1em;
-	font-size: 1.2em;
+	font-size: var(--font-size-mainMedium);
 }
 main section:nth-of-type(1) a {
 	background: var(--color-background);
@@ -437,10 +470,12 @@ main section:nth-of-type(1) a h3 {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	margin-bottom: 0.5em;
+	font-size: var(--font-size-main);
 }
 main section:nth-of-type(1) a p {
 	color: var(--color-text);
 	font-family: var(--font-main);
+	font-size: var(--font-size-main);
 }
 main section:nth-of-type(1) h2 {
 	position: absolute;
@@ -469,10 +504,12 @@ main section:nth-of-type(1) h2 {
 	padding: 0;
 	grid-column-start: 2;
 	align-self: end;
+	font-size: var(--font-main);
 }
 .krachtigeKruiden h2 {
 	grid-column-start: 2;
 	grid-row-start: 2;
+	font-size: var(--font-size-medium);
 }
 .krachtigeKruiden button {
 	align-self: end;
@@ -518,13 +555,13 @@ https://css-tricks.com/snippets/css/flip-an-image/ */
 }
 .krachtigeKruiden ul a article h3 {
 	font-family: var(--font-main);
-	font-size: 0.8em;
+	font-size: var(--font-size-small);
 	font-weight: 500;
 	color: var(--color-text);
 	padding: 1em 1em 1em 1em;
 }
 .krachtigeKruiden ul a article p {
-	font-size: 0.8em;
+	font-size: var(--font-size-small);
 	font-weight: 800;
 	color: var(--color-text);
 	padding: 1em;
@@ -550,16 +587,15 @@ main section:nth-of-type(3) div {
 	grid-template-rows: 3fr 1fr;
 }
 main section:nth-of-type(3) h2 {
-	font-size: 2em;
+	font-size: var(--font-size-large);
 	grid-column-start: 2;
-	grid-column-end: 3;
 }
 main section:nth-of-type(3) a {
 	grid-column-start: 3;
-	grid-column-end: 4;
 	grid-row-start: 2;
 	justify-self: end;
 	color: var(--color-text);
+	font-size: var(--font-size-main);
 }
 
 
@@ -582,15 +618,19 @@ main section:nth-of-type(3) article > h3, main section:nth-of-type(3) article > 
 }
 main section:nth-of-type(3) article h3 {
 	padding-top: 1em;
+	font-size: var(--font-size-main);
 }
 main section:nth-of-type(3) article h4 {
 	font-family: var(--font-headers);
-	font-size: 1.4em;
+	font-size: var(--font-size-medium);
 	font-weight: 500;
+	padding-left: 0.71em;
+	padding-top: 0.5em;
 }
 main section:nth-of-type(3) article p {
 	padding-top: 0.8em;
 	padding-bottom: 2em;
+	font-size: var(--font-size-main);
 }
 main section:nth-of-type(3) article:last-of-type {
 	margin-bottom: 7em;
@@ -605,10 +645,13 @@ main section:nth-of-type(4) {
 	background: var(--color-background);
 	padding: 5em 2em;
 }
+main section:nth-of-type(4) h3 {
+	font-size: var(--font-size-main);
+}
 main section:nth-of-type(4) p {
 	font-family: var(--font-headers);
 	font-weight: 700;
-	font-size: 2em;
+	font-size: var(--font-size-large);
 	margin-bottom: 1em;
 }
 
@@ -673,7 +716,7 @@ main section:nth-of-type(4) ul:last-of-type li:first-of-type {
 footer article {
 	display: grid;
 	grid-template-columns: 1.5em 1fr 1.5em;
-	grid-template-rows: 12em 1fr 1fr 2em 1fr 1.5em 3.5em 2.5em;
+	grid-template-rows: 12em 3em 18% 0 1fr 1.5em 3.5em 3.5em;
 	background-color: var(--color-background5);
 	margin-left: 1.5em;
 	margin-right: 1.5em;
@@ -685,6 +728,7 @@ footer article img {
 }
 footer article h2 {
 	grid-area: 3 / 2 / 4 / 3;
+	font-size: var(--font-size-medium);
 }
 footer article ul {
 	grid-area: 5 / 2 / 6 / 3;
@@ -693,6 +737,7 @@ footer article ul {
 
 footer article ul li {
 	list-style-type: "- ";
+	font-size: var(--font-size-main);
 }
 /* list-style-type:
 https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
@@ -740,6 +785,7 @@ footer section:first-of-type div h3 {
 footer section:first-of-type div a {
 	color: var(--button-text-color);
 	font-family: var(--font-main);
+	font-size: var(--font-size-small);
 }
 
 
@@ -751,6 +797,7 @@ footer section:nth-of-type(2) {
 	color: white;
 	gap: 2em;
 	padding: 1em 0em 6em 1em;
+	font-size: var(--font-size-main);
 }
 footer section:nth-of-type(2) div {
 	display: flex;
@@ -762,6 +809,9 @@ footer section:nth-of-type(2) div img {
 }
 footer section:nth-of-type(2) a {
 	color: white;
+}
+footer section:nth-of-type(2) h2 {
+	font-size: var(--font-size-medium);
 }
 
 
@@ -783,6 +833,7 @@ footer section:nth-of-type(3) div {
 	display: flex;
 	gap: 2.5em;
 	align-items: center;
+	font-size: var(--font-size-main);
 }
 footer section:nth-of-type(3) img {
 	width: 7em;
@@ -791,6 +842,7 @@ footer section:nth-of-type(3) img {
 /* p lichtgrijs */
 footer section:nth-of-type(3) > p {
 	color: lightgrey;
+	font-size: var(--font-size-main);
 }
 
 /* homepage: service, over ons & inspiratie 
@@ -824,6 +876,7 @@ footer section:nth-of-type(3) ul:first-of-type img {
 footer section:nth-of-type(3) ul:first-of-type li ul li {
 	margin-top: 1em;
 	font-family: var(--font-headers);
+	font-size: var(--font-size-main);
 }
 footer section:nth-of-type(3) ul:first-of-type li ul li:last-of-type {
 	padding-bottom: 1em;
@@ -843,6 +896,7 @@ footer section:nth-of-type(3) > button {
 	border: none;
 	padding: 1em;
 	align-items: center;
+	font-size: var(--font-size-small);
 }
 footer section:nth-of-type(3) > button img {
 	width: 1.5em;
@@ -850,9 +904,6 @@ footer section:nth-of-type(3) > button img {
 
 footer section:nth-of-type(3) > button img:first-of-type {
 	margin-right: 1em;
-}
-footer section:nth-of-type(3) > button p {
-	font-size: 1.3em;
 }
 footer section:nth-of-type(3) > button img:last-of-type {
 	margin-left: auto;
@@ -879,6 +930,7 @@ footer section:nth-of-type(3) ul:nth-of-type(2) li button {
 	margin-bottom: 0.5em;
 	width: 100%;
 	color: var(--color-text);
+	font-size: var(--font-size-small);
 }
 
 
@@ -913,6 +965,7 @@ footer section:nth-of-type(3) ul:nth-of-type(4) {
 	gap: 1.5em;
 	margin-top: 1em;
 	margin-bottom: 4em;
+	font-size: var(--font-size-main);
 }
 footer section:nth-of-type(3) ul:nth-of-type(4) li a {
 	color: var(--color-text);
@@ -947,6 +1000,7 @@ footer section:nth-of-type(3) ul:nth-of-type(5) li:nth-of-type(1) img{
 footer section:last-of-type span {
 	display: flex;
 	justify-content: center;
+	font-size: var(--font-size-small);
 }
 
 
@@ -972,6 +1026,7 @@ footer section:last-of-type span {
 	overflow-x: auto;
 	padding-top: 1em;
 	background-color: var(--color-background2);
+	font-size: var(--font-size-main);
 }
 .breadcrumbs::-webkit-scrollbar {
 	display: none;
@@ -1078,6 +1133,7 @@ section:nth-child(1) div img {
 	position: relative;
 	line-height: 2em;
 	margin-bottom: 2em;
+	font-size: var(--font-size-main);
 }
 .theepotDropdown li div {
 	position: relative;
@@ -1096,6 +1152,7 @@ section:nth-child(1) div img {
 /* aanbevolen voor jou */
 .aanbevolen h2 {
 	margin-left: 0.8em;
+	font-size: var(--font-size-medium);
 }
 .aanbevolen div {
 	display: flex;
@@ -1136,13 +1193,13 @@ section:nth-child(1) div img {
 }
 .aanbevolen ul article h4 {
 	font-family: var(--font-main);
-	font-size: 0.8em;
+	font-size: var(--font-size-main);
 	font-weight: 500;
 	color: var(--color-text);
 	padding: 1em 1em 1em 1em;
 }
 .aanbevolen ul a article p {
-	font-size: 0.8em;
+	font-size: var(--font-size-small);
 	font-weight: 800;
 	color: var(--color-text);
 	padding: 1em;
@@ -1207,6 +1264,7 @@ section:nth-child(1) div img {
 	list-style-type: '✓';
 	/* margin-left: 2em; */
 	padding: 1.5em;
+	font-size: var(--font-size-main);
 }
 
 .backgroundTheepot > ul:first-of-type li button img {
@@ -1217,6 +1275,7 @@ section:nth-child(1) div img {
 .backgroundTheepot > a:first-of-type {
 	margin-left: 1em;
 	color: var(--color-text);
+	font-size: var(--font-size-main);
 }
 
 
@@ -1225,6 +1284,7 @@ section:nth-child(1) div img {
 	display: flex;
 	justify-content: space-between;
 	margin: 1em 1em;
+	font-size: var(--font-size-main);
 }
 
 
@@ -1239,4 +1299,14 @@ section:nth-child(1) div img {
 }
 .hiddenVisibility {
 	visibility: hidden;
+}
+
+
+
+.hiddenAnimation {
+	opacity: 0;
+	transition: all 1s;
+}
+.show {
+	opacity: 1;
 }

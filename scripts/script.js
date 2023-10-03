@@ -78,6 +78,10 @@ let darklightModeButton = document.querySelector('main > ul:last-of-type li:firs
 let darklightModeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button img');
 
 let fallThemeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button');
+let fallThemeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button img');
+
+let fontSizeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button');
+let fontSizeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button img');
 
 
 settingsUl.classList.add('hidden');
@@ -104,6 +108,24 @@ darklightModeButton.addEventListener('click', function() {
 // fall theme
 fallThemeButton.addEventListener('click', function() {
     root.classList.toggle('fallTheme');
+
+    if (fallThemeImg.src.includes("fallThemeOn.png")) {
+        fallThemeImg.src= "images/fallThemeOff.png";
+      } else {
+        fallThemeImg.src= "images/fallThemeOn.png";
+    }
+});
+
+// font size
+fontSizeButton.addEventListener('click', function() {
+    root.classList.toggle('largeText');
+    console.log('geklikt')
+
+    if (fontSizeImg.src.includes("fontSize.png")) {
+        fontSizeImg.src= "images/fontSizeSmall.png";
+      } else {
+        fontSizeImg.src= "images/fontSize.png";
+    }
 });
 
 
@@ -294,7 +316,7 @@ buttonInspiratie.addEventListener('click', openInspiratie);
 
 
 /* language dropdown */
-let languageDropdown = document.querySelector('footer section:nth-of-type(3) > button');
+let languageDropdown = document.querySelector('body > footer > section:nth-child(4) > button');
 let languageDropdownUl = document.querySelector('footer section:nth-of-type(3) ul:nth-of-type(2)');
 let languageDropdownArrow = document.querySelector('footer section:nth-of-type(3) > button img:last-of-type');
 let languageDropdownCheck = document.querySelectorAll('footer section:nth-of-type(3) ul:nth-of-type(2) li img:last-child');
@@ -354,8 +376,7 @@ function languageDropdownClick(event) {
         
             // now lang name
             langNameUl = buttonElement.getAttribute('lang');
-            langName = languageDropdown.querySelectorAll('p')[0];
-            
+            langName = languageDropdown.querySelectorAll('span')[0]; // debug: undefined
             langName.textContent = langNameUl;
         }
     }
@@ -376,3 +397,21 @@ if (languageDropdownUl) {
    SetAttribute(): https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute 
 */
 
+
+
+
+
+// scroll animation
+
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('show');
+//         } else {
+//             entry.target.classList.remove('show');
+//         }
+//     });
+// });
+
+// const hiddenElements = document.querySelectorAll('.hiddenAnimation');
+// hiddenElements.forEach((el) => observer.observe(el));
