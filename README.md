@@ -45,6 +45,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de tweede pagina (small screen):
   Dille & Kamille  
   <img src="images/detailpaginGroot.png" width="375px" alt="detailpagina">
+  <img src="readmeimages/detailpaginaKlein.png" width="375px" alt="Detailpagina klein voorbeeld">
 </details>
 
 
@@ -69,13 +70,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="readme-images/htmlStructuurHomepagina.png" width="375px" alt="html breakdown homepagina">
   <img src="readme-images/htmlStructuurDetailpagina.png" width="375px" alt="html breakdown detailpagina">
-  <img src="readmeimages/detailpaginaKlein.png alt=Detailpagina klein voorbeeld>
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <!-- ### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
 
 </details>
 
