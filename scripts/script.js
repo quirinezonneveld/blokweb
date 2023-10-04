@@ -257,22 +257,26 @@ let radioButtonLeft = document.querySelector('section:nth-child(1) input:first-o
 let radioButtonRight = document.querySelector('section:nth-child(1) input:last-of-type');
 
 if (scrollContainerTheepot) {
-    radioButtonLeft.addEventListener('click', function(){
+    radioButtonLeft.addEventListener('click', function() {
         scrollContainerTheepot.scrollLeft -= 375;
-    });
-    radioButtonRight.addEventListener('click', function(){
-        scrollContainerTheepot.scrollLeft += 375;
+        buttonTheepot.src = "images/iconArrow3.png";
     });
 
-    buttonTheepot.addEventListener('click', function(){
-        console.log('Button geklikt');
-        // (buttonTheepot.src === "images/iconArrow3.png") {
+    radioButtonRight.addEventListener('click', function() {
+        scrollContainerTheepot.scrollLeft += 375;
+        buttonTheepot.src = "images/iconArrow3Left.png";
+    });
+
+    buttonTheepot.addEventListener('click', function() {
+        if (buttonTheepot.src.includes("iconArrow3.png")) {
             scrollContainerTheepot.scrollLeft += 375;
             buttonTheepot.src = "images/iconArrow3Left.png";
-        // } else {
-        //     scrollContainerTheepot.scrollLeft -= 375;
-        //     buttonTheepot.src = "images/iconArrow3.png";
-        // }
+            radioButtonRight.checked = true;
+        } else {
+            scrollContainerTheepot.scrollLeft -= 375;
+            buttonTheepot.src = "images/iconArrow3.png";
+            radioButtonLeft.checked = true;
+        }
     });
 }
 
