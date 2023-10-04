@@ -171,15 +171,6 @@ fallThemeButton.addEventListener('click', function() {
     }
 });
 
-// console.log(window.location.pathname);
-// if (window.location.pathname === '/theepot.html') {
-//     function countingItems() {
-//         count = count + 1;
-//         aantalWinkelmandje.innerHTML = count;
-//     }
-//     winkelmandjeButton.addEventListener('click', countingItems);
-// }
-
 
 
 // font size
