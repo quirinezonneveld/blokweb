@@ -44,8 +44,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Dille & Kamille  
-  <img src="readme-images/detailpaginGroot.png" width="375px" alt="detailpagina">
+  <!-- <img src="readme-images/detailpaginGroot.png" width="375px" alt="detailpagina"> -->
   <img src="readme-images/detailPaginaKlein.png" width="375px" alt="Detailpagina klein voorbeeld">
+  <img src="readme-images/homePaginaKlein!.png" width="375px" alt="Homepagina klein voorbeeld">
 </details>
 
 
