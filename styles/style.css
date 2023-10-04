@@ -226,6 +226,8 @@ main > ul:last-of-type {
 	list-style-type: none;
 	gap: 1em;
 }
+
+
 main > ul:last-of-type li:first-of-type {
 	border-radius: 3em;
 	background-color: lightgrey;
@@ -244,12 +246,26 @@ main > ul:last-of-type > li > button img {
 }
 main > ul:last-of-type > li ul li img {
 	border: solid lightgrey 0.9em;
+	animation: downUp 0.7s ease-out ;
+	transition: opacity 2500ms ease-in;
 }
 main > ul:last-of-type li button {
 	border: none;
 	background-color: transparent;
 }
-
+@keyframes downUp {
+	0% {
+		opacity: 0;
+		transform: translatey(3em);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		transform: translatey(0);
+		opacity: 1;
+	}
+}
 
 
 /* navigatie melding */
@@ -1276,6 +1292,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
 .backgroundTheepot > ul:first-of-type li select {
 	width: 5em;
 	padding-left: 1.5em;
+	font-size: var(--font-size-small);
 	
 }
 .backgroundTheepot > ul:first-of-type li:nth-of-type(2) button {
