@@ -186,6 +186,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ook leest de screenreader nu voor wat voor img het is (de alt tekst).
   - Buttons met alt=arrow. Zegt niet heel veel over wat je ermee kan doen. Omschrijven wat je ziet -> je hoeft niet aan te geven dat het een img is.
   - skip link plaatsen is belangrijk
+  - decorative images heb ik bij sommige een alt -> deze moet null staan
   - Er zijn nog een paar kleine errors
 
 </details>
