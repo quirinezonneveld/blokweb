@@ -98,8 +98,8 @@ let fallThemeButton = document.querySelector('main > ul:last-of-type li:first-of
 let fallThemeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button img');
 const fallAnimations = document.getElementsByClassName('fallDecoration');
 let homepageImg = document.querySelector('header > img:last-child');
-let pompoenImg = document.querySelector('header > img:nth-of-type(4)');
-let pompoenenImg = document.querySelector('header > img:nth-of-type(5)');
+// let pompoenImg = document.querySelector('header > img:nth-of-type(4)');
+// let pompoenenImg = document.querySelector('header > img:nth-of-type(5)');
 
 
 let fontSizeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button');
@@ -148,15 +148,15 @@ for (let i = 0; i < fallAnimations.length; i++) {
 }
 // Loopt door de gevonden elementen en voegt "hidden" toe
 
-if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-    pompoenImg.classList.add('hidden');
-    pompoenenImg.classList.add('hidden');
-}
+// if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+//     pompoenImg.classList.add('hidden');
+//     pompoenenImg.classList.add('hidden');
+// }
 
 fallThemeButton.addEventListener('click', function() {
     root.classList.toggle('fallTheme');
-    pompoenImg.classList.toggle('hidden');
-    pompoenenImg.classList.toggle('hidden');
+    // pompoenImg.classList.toggle('hidden');
+    // pompoenenImg.classList.toggle('hidden');
     
     for (let i = 0; i < fallAnimations.length; i++) {
         fallAnimations[i].classList.toggle('hidden');

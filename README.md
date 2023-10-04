@@ -250,7 +250,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 In mijn Javascript heb ik twee img geselecteerd die alleen op de index.html staan. Om errors te voorkomen heb ik het volgende in mijn js geplaatst:
  if (window.location.pathname === '/index.html' || window.location.pathname === '/')
-Dit wil echter niet altijd werken.
+Dit wil echter niet altijd werken. Ik heb voor nu ivm een error deze twee img op hidden gezet.
   <img src="readme-images/windowScreenshot.png" width="375px" alt="Website op Safari">
 </details>
 
