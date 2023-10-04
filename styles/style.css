@@ -185,50 +185,6 @@ footer {
 	}
 }
 
-/* #loader {
-	background: var(--color-background);
-	height:  100vh;
-	width: 100%;
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-} */
-
-/* #loader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color-background2);
-	transition: opacity 0.75s, visibiltiy 0.75s;
-}
-loader::after {
-	height: 4em;
-	z-index: 1000;
-	width: 4em;
-	border: solid 0.2em;
-	border-color: red transparent red transparent;
-	border-radius: 50%;
-	animation: spin 1.3s linear infinite;
-}
-@keyframes spin {
-	from{
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-#loaderHidden {
-	opacity: 0;
-	visibility: hidden;
-} */
-
 
 
 /* skip to content */
@@ -1370,6 +1326,33 @@ section:nth-child(1) div img {
 	justify-content: space-between;
 	margin: 1em 1em;
 	font-size: var(--font-size-main);
+}
+
+
+/* fall theme */
+.fallDecoration {
+	width: 2em;
+	position: absolute;
+	top: 10em;
+	z-index: 1;
+	animation: leftRight 5s linear infinite;
+	transform: translatex(-3em);
+}
+.fallDecoration:nth-of-type(2) {
+	animation-delay: 0.5s;
+}
+.fallDecoration:nth-of-type(3) {
+	animation-delay: 1s;
+}
+@keyframes leftRight {
+	0% {
+		/* left: -3em; */
+		transform: translatex(-3em);
+	}
+	100% {
+		transform: translatex(22em);
+		/* left: 100%; */
+	}
 }
 
 

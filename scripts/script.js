@@ -124,8 +124,18 @@ darklightModeButton.addEventListener('click', function() {
 
 
 // fall theme
+const fallAnimations = document.getElementsByClassName('fallDecoration');
+// Loop door de gevonden elementen en voeg de klasse "hidden" toe
+for (let i = 0; i < fallAnimations.length; i++) {
+  fallAnimations[i].classList.add('hidden');
+}
+
 fallThemeButton.addEventListener('click', function() {
     root.classList.toggle('fallTheme');
+    
+    for (let i = 0; i < fallAnimations.length; i++) {
+        fallAnimations[i].classList.toggle('hidden');
+    }
 
     if (fallThemeImg.src.includes("fallThemeOn.png")) {
         fallThemeImg.src= "images/fallThemeOff.png";
@@ -133,6 +143,12 @@ fallThemeButton.addEventListener('click', function() {
         fallThemeImg.src= "images/fallThemeOn.png";
     }
 });
+
+
+
+
+
+
 
 // font size
 fontSizeButton.addEventListener('click', function() {
