@@ -488,3 +488,6 @@ const elementsToObserve = document.querySelectorAll('.hiddenAnimation, .slideAni
 elementsToObserve.forEach((element) => {
     observer.observe(element);
 });
+
+/* scroll-animation:
+https://www.youtube.com/watch?v=huVJW23JHKQ https://youtu.be/huVJW23JHKQ?si=iJcgi2joHmCez_Jo */

@@ -84,6 +84,8 @@
 .darkmode nav img, .darkmode header div:nth-of-type(2) img, .darkmode main section:nth-of-type(2) button, .darkmode footer section:nth-of-type(3) div img, .darkmode footer section:nth-of-type(3) ul:nth-of-type(3) img, .darkmode .theepotDropdown button img {
 	filter: invert(100%);
 }
+/* darklight-mode: 
+https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp */
 
 
 /* fall theme */
@@ -94,6 +96,9 @@
 	--color-background: rgb(227, 184, 110);
 	--color-background2: #c97010;
 	--color-background3: #df8f26;
+	--background-image: linear-gradient(-55deg, #e2b292, #e2b292, rgb(227, 184, 110), rgb(227, 184, 110));
+
+	
 	--color-background4: #b47016;;
 	--color-background5: #ce9169;
 
@@ -206,7 +211,8 @@ header > a:first-of-type:focus {
 	transform: translateY(0);
 	position: relative;
 }
-
+/* skip to main content: 
+https://www.youtube.com/watch?v=287mLmuamoM https://www.youtube.com/watch?v=jDDaOFr9nqQ */
 
 
 /* klantenservice & settings button */
@@ -486,6 +492,7 @@ main section:nth-of-type(1) a {
 	text-decoration: none;
 	width: 9.8em;
 	text-align: center;
+	background-image: var(--background-image);
 }
 main section:nth-of-type(1) a img {
 	width: 8em;
@@ -633,6 +640,7 @@ main section:nth-of-type(3) {
 }
 main section:nth-of-type(3) article {
 	background: var(--color-background);
+	background-image: var(--background-image);
 }
 main section:nth-of-type(3) article > * {
 	width: 85vw;
@@ -1080,6 +1088,7 @@ section:nth-child(1) ul {
 	background-color: var(--color-background);
 	height: 17.5em;
 	align-items: center;
+	background-image: var(--background-image);
 }
 section:nth-child(1) ul::-webkit-scrollbar {
 	display: none;
@@ -1193,7 +1202,6 @@ section:nth-child(1) div img {
 	gap: 1em;
 	margin-left: 1em;
 	margin-right: 1em;
-
 }
 
 .aanbevolen ul a {
