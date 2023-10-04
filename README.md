@@ -39,13 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Dille & Kamille: https://www.dille-kamille.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  Dille & Kamille  
   <img src="images/homepaginaGroot.png" width="375px" alt="homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Dille & Kamille  
   <img src="images/detailpaginGroot.png" width="375px" alt="detailpagina">
- 
 </details>
 
 
@@ -68,8 +67,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="images/htmlStructuurHomepagina.png" width="375px" alt="html breakdown homepagina">
-  <img src="images/htmlStructuurDetailpagina.png" width="375px" alt="html breakdown detailpagina">
+  <img src="readme-images/htmlStructuurHomepagina.png" width="375px" alt="html breakdown homepagina">
+  <img src="readme-images/htmlStructuurDetailpagina.png" width="375px" alt="html breakdown detailpagina">
+  <img src="readmeimages/detailpaginaKlein.png alt=Detailpagina klein voorbeeld>
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
