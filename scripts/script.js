@@ -9,7 +9,17 @@ function sleep(ms) {
 }
 
 
+window.addEventListener("load", () => {
+    const loader = document.querySelector('.loader');
 
+    loader.classList.add('loaderHidden');
+
+    loader.addEventListener('transitioned', () => {
+        document.body.removeChild("loader");
+    })
+})
+/* loading state:
+https://youtu.be/q76TexbMXJg?si=vlp8dG1rG1nBCQAv */
 
 
 // navigatie melding

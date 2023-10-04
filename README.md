@@ -269,6 +269,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   20. scroll-snap-type: https://www.youtube.com/watch?v=Xc6G3oV24yE
   21. darklight-mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
   22. skip to main content: https://www.youtube.com/watch?v=287mLmuamoM https://www.youtube.com/watch?v=jDDaOFr9nqQ 
-  23. scroll-animation: https://www.youtube.com/watch?v=huVJW23JHKQ 
+  23. scroll-animation: https://www.youtube.com/watch?v=huVJW23JHKQ https://youtu.be/huVJW23JHKQ?si=iJcgi2joHmCez_Jo 
+  24. loading-state: https://youtu.be/VbAD6cifkWM?si=8Ksq2coWmzMVNXvg https://youtu.be/q76TexbMXJg?si=vlp8dG1rG1nBCQAv
 
 </details>

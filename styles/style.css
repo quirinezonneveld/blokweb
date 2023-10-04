@@ -148,6 +148,89 @@ footer {
 }
 
 
+
+/* loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-background2);
+	transition: opacity 2s, visibility 2s;
+	z-index: 1000;
+}
+.loaderHidden {
+	opacity: 0;
+	visibility: hidden;
+}
+.loader::after {
+	content: "";
+	width: 75px;
+	height: 75px;
+	border: 15px solid white;
+	border-top-color: black;
+	border-radius: 50%;
+	animation: loading 3s ease infinite;
+}
+@keyframes loading {
+	from{
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(3turn);
+	}
+}
+
+/* #loader {
+	background: var(--color-background);
+	height:  100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+} */
+
+/* #loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-background2);
+	transition: opacity 0.75s, visibiltiy 0.75s;
+}
+loader::after {
+	height: 4em;
+	z-index: 1000;
+	width: 4em;
+	border: solid 0.2em;
+	border-color: red transparent red transparent;
+	border-radius: 50%;
+	animation: spin 1.3s linear infinite;
+}
+@keyframes spin {
+	from{
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#loaderHidden {
+	opacity: 0;
+	visibility: hidden;
+} */
+
+
+
 /* skip to content */
 header > a:first-of-type {
 	background-color: rgb(185, 185, 185);
@@ -1315,7 +1398,7 @@ section:nth-child(1) div img {
 }
 .slideAnimation {
 	transform: translateX(-80%);
-	transition: transform 600ms ease-in;
+	transition: transform 650ms ease-in;
 }
 
 .show {
