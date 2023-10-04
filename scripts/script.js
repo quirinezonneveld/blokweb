@@ -9,6 +9,10 @@ function sleep(ms) {
 }
 
 
+
+
+
+// loading state
 window.addEventListener("load", () => {
     const loader = document.querySelector('.loader');
 
@@ -20,6 +24,9 @@ window.addEventListener("load", () => {
 })
 /* loading state:
 https://youtu.be/q76TexbMXJg?si=vlp8dG1rG1nBCQAv */
+
+
+
 
 
 // navigatie melding
@@ -45,11 +52,10 @@ async function updateAndRemove() {
 if (navigatieMelding) {
     updateAndRemove();
     setInterval(updateAndRemove, 4000);
-
 }
-
 /* textContent:
 https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent */
+
 
 
 
@@ -60,7 +66,6 @@ let hamburgermenuButton = document.querySelector('header nav ul:first-of-type li
 let hamburgermenuBovenkant = document.querySelector('header nav ul:nth-of-type(2)');
 let hamburgermenuOnderkant = document.querySelector('footer > ul:last-of-type');
 let fixedButtons = document.querySelector('main > ul:last-of-type');
-
 
 
 
@@ -84,14 +89,19 @@ let settingsButton = document.querySelector('main > ul:last-of-type > li:first-o
 let settingsUl = document.querySelector('main > ul:last-of-type li:first-of-type ul');
 let root = document.querySelector(':root');
 
+
 let darklightModeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button');
 let darklightModeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:first-of-type button img');
 
+
 let fallThemeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button');
 let fallThemeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(2) button img');
+const fallAnimations = document.getElementsByClassName('fallDecoration');
+
 
 let fontSizeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button');
 let fontSizeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button img');
+
 
 let soundButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(4) button'); 
 const soundImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(4) button img'); 
@@ -111,6 +121,9 @@ function openSettings() {
 settingsButton.addEventListener('click', openSettings);
 
 
+
+
+
 // darklight mode
 darklightModeButton.addEventListener('click', function() {
   root.classList.toggle('darkmode');
@@ -123,12 +136,14 @@ darklightModeButton.addEventListener('click', function() {
 });
 
 
+
+
+
 // fall theme
-const fallAnimations = document.getElementsByClassName('fallDecoration');
-// Loop door de gevonden elementen en voeg de klasse "hidden" toe
 for (let i = 0; i < fallAnimations.length; i++) {
   fallAnimations[i].classList.add('hidden');
 }
+// Loopt door de gevonden elementen en voegt "hidden" toe
 
 fallThemeButton.addEventListener('click', function() {
     root.classList.toggle('fallTheme');
@@ -148,8 +163,6 @@ fallThemeButton.addEventListener('click', function() {
 
 
 
-
-
 // font size
 fontSizeButton.addEventListener('click', function() {
     root.classList.toggle('largeText');
@@ -162,8 +175,11 @@ fontSizeButton.addEventListener('click', function() {
     }
 });
 
-// sound
 
+
+
+
+// sound
 function playsound() {
     if (soundImg.src.includes("soundOn.png")) {
         function riverForest() {
@@ -192,19 +208,6 @@ buttons.forEach(function(button) {
 });
 
 
-// function linkSound() {
-//     const audio = new Audio('sounds/buttonSound.mp3');
-//     audio.play();
-// }
-
-// links.forEach(function(a) {
-//     a.addEventListener('click', linkSound);
-// });
-
-
-
-
-
 
 
 
@@ -223,6 +226,8 @@ if (arrowLeft && arrowRight) {
 }
 /* image galary:
 https://www.youtube.com/watch?v=gzXyRa7jwk4 */
+
+
 
 
 
@@ -269,10 +274,7 @@ if (scrollContainerTheepot) {
         //     buttonTheepot.src = "images/iconArrow3.png";
         // }
     });
-
 }
-
-
 
 
 
@@ -320,16 +322,6 @@ if (window.location.pathname === '/theepot.html') {
 
 
 
-// if (productinformatie.classList.contains('hidden')) {
-        //     iconProductinformatie.src = "images/iconAdd.svg";
-        // } else {
-        //     iconProductinformatie.src = "images/iconStripe.svg";
-        // }
-
-
-
-
-
 
 
 /**********/
@@ -349,9 +341,12 @@ let buttonInspiratie = document.querySelector('footer section:nth-of-type(3) ul:
 let iconInspiratie = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:last-of-type button img');
 let inspiratie = document.querySelector('footer section:nth-of-type(3) ul:first-of-type li:last-of-type ul');
 
+
+
 service.classList.add('hidden');
 overOns.classList.add('hidden');
 inspiratie.classList.add('hidden');
+
 
 function openService() {
     service.classList.toggle('hidden');
@@ -385,7 +380,6 @@ function openInspiratie() {
     }
 };
 buttonInspiratie.addEventListener('click', openInspiratie);
-
 
 
 
@@ -478,7 +472,6 @@ if (languageDropdownUl) {
 
 
 // scroll animation
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -489,32 +482,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const elementsToObserve = document.querySelectorAll('.hiddenAnimation');
+
+const elementsToObserve = document.querySelectorAll('.hiddenAnimation, .slideAnimation');
+
 elementsToObserve.forEach((element) => {
     observer.observe(element);
 });
-const elementsToObserve2 = document.querySelectorAll('.slideAnimation');
-elementsToObserve2.forEach((element) => {
-    observer.observe(element);
-});
-
-
-// const faders = document.querySelectorAll('.hiddenAnimation');
-// const appearOptions = {
-//     threshold: 1
-// };
-
-// const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-//     entries.forEach(entry => {
-//         if (!entry.isIntersecting) {
-//             return;
-//         } else {
-//             entry.target.classList.add('appear');
-//             appearOnScroll.unobserve(entry.target);
-//         }
-//     })
-// }, appearoptions);
-
-// faders.forEach(fader => {
-//     appearOnScroll.observe(fader);
-// })

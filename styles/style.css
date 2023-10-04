@@ -16,6 +16,7 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 
+/* root */
 :root {
 	--color-text: black;
 	--color-text2: white;
@@ -64,6 +65,7 @@
 		filter: invert(100%);
 	}
 }
+/* darklight-mode */
 .darkmode {
 	--color-text: white;
 	--color-text2: black;
@@ -84,6 +86,7 @@
 }
 
 
+/* fall theme */
 .fallTheme {
 	--color-text: black;
 	--color-text2: white;
@@ -101,6 +104,7 @@
 }
 
 
+/* font size vergroten */
 .largeText {
 	--font-size-main: 1.3em;
 	--font-size-small: 1em;
@@ -114,9 +118,11 @@
 
 
 
+
 /****************/
-/* JOUW STYLING */
+/* MAIN STYLING */
 /****************/
+
 html {
     scroll-behavior: smooth;
 }
@@ -135,7 +141,6 @@ h1 {
 	font-family: var(--font-headers);
 	font-size: var(--font-size-large);
 }
-
 h2 {
 	font-family: var(--font-headers);
 }
@@ -149,7 +154,7 @@ footer {
 
 
 
-/* loader */
+/* loading state */
 .loader {
 	position: fixed;
 	top: 0;
@@ -204,9 +209,7 @@ header > a:first-of-type:focus {
 
 
 
-
-
-/* klantenservice & settings */
+/* klantenservice & settings button */
 main > ul:last-of-type {
 	display: flex;
 	flex-direction: column;
@@ -236,19 +239,10 @@ main > ul:last-of-type > li > button img {
 main > ul:last-of-type > li ul li img {
 	border: solid lightgrey 0.9em;
 }
-/* main > ul:last-of-type li:first-of-type ul {
-	display: none;
-} */
 main > ul:last-of-type li button {
 	border: none;
 	background-color: transparent;
 }
-
-/* main > ul:last-of-type li:first-of-type ul li:first-of-type button {
-	background-color: red;
-} */
-
-
 
 
 
@@ -277,6 +271,7 @@ header div:first-of-type p {
     0% {opacity: 0;}
     100% {opacity: 100;}
 }
+
 
 
 /* navigatie */
@@ -309,6 +304,8 @@ header nav ul:nth-of-type(1) li button {
 	background-color: var(--color-background);
 }
 
+
+
 /* hamburgermenu */
 header nav ul:nth-of-type(2) {
 	display: flex;
@@ -323,23 +320,12 @@ header nav ul:nth-of-type(2) {
 	z-index: 20;
 	position: absolute;
 	list-style-type: none;
-	/* visibility: hidden; */
 }
 header nav ul:nth-of-type(2) li a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-
-/* header nav ul:nth-of-type(2) li button {
-	display: flex;
-	border: none;
-	justify-content: space-between;
-	background-color: transparent;
-	width: 100%;
-	font-size: var(--font-main);
-	align-items: center;
-} */
 
 header nav ul:nth-of-type(2) li a {
 	font-family: var(--font-headers);
@@ -418,7 +404,6 @@ header div:nth-of-type(2) {
 }
 header div:nth-of-type(2) > * {
 	border: none;
-	/* background-color: var(--color-background); */
 }
 header div:nth-of-type(2) img {
 	width: 2em;
@@ -434,8 +419,15 @@ header div:nth-of-type(2) input {
 	background-color: var(--color-background-navigatie);
 }
 /* Cursor:
-   https://developer.mozilla.org/en-US/docs/Web/CSS/cursor  */
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor  */
 
+
+
+
+
+/********************/
+/* STYLING HOMEPAGE */
+/********************/
 
 /* wijsheden uit de natuur, herfst bij dille */
 .landingspagina {
@@ -449,7 +441,6 @@ header div:nth-of-type(2) input {
 header > img:last-child {
 	width: 20.6em;
 	position: absolute;
-	/* transform: translateY(-11em); */
 	transform: translate(1.5em, -11em);
 }
 /* transform: translate():
@@ -471,9 +462,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
 	font-size: var(--font-size-main);
 }
 
-/************/
-/* homepage */
-/************/
+
 
 /* categoriën */
 main section:nth-of-type(1) {
@@ -483,7 +472,6 @@ main section:nth-of-type(1) {
 	gap: 1em;
 	justify-content: center;
 	padding-top: 3.5em;
-	/* padding-bottom: 3.2em; */
 }
 main section:nth-of-type(1) h1 {
 	margin-top: 2em;
@@ -520,9 +508,6 @@ main section:nth-of-type(1) h2 {
 	position: absolute;
 	visibility: hidden;
 }
-
-
-
 
 
 
@@ -568,6 +553,7 @@ main section:nth-of-type(1) h2 {
 https://css-tricks.com/snippets/css/flip-an-image/ */
 
 
+/* slider: herfst bij dille, koken met krachtige kruiden */
 .krachtigeKruiden ul {
 	display: flex;
 	overflow-x: auto;
@@ -578,7 +564,6 @@ https://css-tricks.com/snippets/css/flip-an-image/ */
 .krachtigeKruiden ul::-webkit-scrollbar {
 	display: none;
 }
-
 
 .krachtigeKruiden ul li {
 	background-color: var(--color-background);
@@ -592,7 +577,6 @@ https://css-tricks.com/snippets/css/flip-an-image/ */
 .krachtigeKruiden ul img {
 	width: 10em;
 }
-
 
 .krachtigeKruiden ul a article h3 {
 	font-family: var(--font-main);
@@ -750,9 +734,9 @@ main section:nth-of-type(4) ul:last-of-type li:first-of-type {
 
 
 
-
-
-/* footer */
+/**********/
+/* FOOTER */
+/**********/
 /* wordt member van dille & kamille en ontvang */
 footer article {
 	display: grid;
@@ -793,9 +777,6 @@ footer article button {
     font-size: var(--button-font-size);
 	grid-area: 7 / 2 / 8 / 3;
 }
-
-
-
 
 
 /* altijd in de buurt */
@@ -869,6 +850,8 @@ footer section:nth-of-type(3) h2 {
 	visibility: hidden;
 }
 
+
+
 /* logo & beoordeling */
 footer section:nth-of-type(3) div {
 	display: flex;
@@ -885,6 +868,8 @@ footer section:nth-of-type(3) > p {
 	color: lightgrey;
 	font-size: var(--font-size-main);
 }
+
+
 
 /* homepage: service, over ons & inspiratie 
    &
@@ -927,7 +912,6 @@ footer section:nth-of-type(3) ul:first-of-type li ul li a {
 	color: var(--color-text);
 	text-decoration: none;
 }
-
 
 
 
@@ -985,6 +969,7 @@ footer section:nth-of-type(3) ul:nth-of-type(2) li img:last-child {
 }
 
 
+
 /* social media icons */
 footer section:nth-of-type(3) ul:nth-of-type(3) {
 	display: flex;
@@ -1012,7 +997,6 @@ footer section:nth-of-type(3) ul:nth-of-type(4) li a {
 	color: var(--color-text);
 	text-decoration: none;
 }
-
 
 
 
@@ -1058,6 +1042,7 @@ footer section:last-of-type span {
 }
 
 
+
 /* breadcrumbs */
 .breadcrumbs {
 	display: flex;
@@ -1082,9 +1067,6 @@ footer section:last-of-type span {
 .breadcrumbs li:last-of-type a {
 	color: darkgrey;
 }
-
-
-
 
 
 
@@ -1130,7 +1112,6 @@ section:nth-child(1) div img {
 	margin-right: 2em;
 	margin-left: 19em;
 }
-
 
 
 
@@ -1246,6 +1227,7 @@ section:nth-child(1) div img {
 	padding: 1em;
 }
 
+
 /* aanbevolen arrows */
 .aanbevolen button {
 	border: none;
@@ -1265,8 +1247,7 @@ section:nth-child(1) div img {
 	filter: invert(100%);
 }
 /* filter: 
-   https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
-
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
 
 
 
@@ -1329,6 +1310,12 @@ section:nth-child(1) div img {
 }
 
 
+
+
+/*************/
+/* ANIMATION */
+/*************/
+
 /* fall theme */
 .fallDecoration {
 	width: 2em;
@@ -1357,6 +1344,8 @@ section:nth-child(1) div img {
 
 
 
+
+
 /****************/
 /* styling */
 /****************/
@@ -1370,14 +1359,9 @@ section:nth-child(1) div img {
 }
 
 
-
 .hiddenAnimation {
 	opacity: 0;
-	/* top: 10em; */
 	transition: opacity 1100ms ease-in;
-	/* animation: verschijn 2s ease; */
-	/* transform: translateX(-80%);
-	transition: transform 400ms ease-in; */
 }
 .slideAnimation {
 	transform: translateX(-80%);
@@ -1387,14 +1371,4 @@ section:nth-child(1) div img {
 .show {
 	opacity: 1;
 	transform: translateX(0);
-}
-/* .show { */
-	/* opacity: 1; */
-	/* transform: translateY(0); */
-	/* top: 0; */
-/* } */
-
-@keyframes verschijn {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
 }
