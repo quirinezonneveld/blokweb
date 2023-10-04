@@ -1303,6 +1303,16 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
 	font-size: var(--button-font-size);
 	height: 3em;
 }
+nav > p:first-of-type {
+	background-color: #97B17E;
+	width: 1em;
+	position: absolute;
+	right: 1.8em;
+	top: 2.8em;
+	border-radius: 50%;
+	text-align: center;
+	color: black;
+}
 .backgroundTheepot > ul:first-of-type li:last-of-type button {
 	background-color: transparent;
 }

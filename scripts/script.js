@@ -284,6 +284,21 @@ if (scrollContainerTheepot) {
 
 
 
+// in winkelmandje
+let winkelmandjeButton = document.querySelector('.backgroundTheepot > ul:first-of-type li:nth-of-type(2) button');
+let aantalWinkelmandje = document.querySelector('nav > p:first-of-type');
+let count = 0;
+
+function countingItems() {
+    count = count + 1;
+    aantalWinkelmandje.innerHTML = count;
+}
+winkelmandjeButton.addEventListener('click', countingItems);
+
+
+
+
+
 // dropdowns productinformatie & specificaties
 let buttonProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button');
 let iconProductinformatie = document.querySelector('.theepotDropdown li:first-of-type button img');
