@@ -148,8 +148,10 @@ for (let i = 0; i < fallAnimations.length; i++) {
 }
 // Loopt door de gevonden elementen en voegt "hidden" toe
 
-pompoenImg.classList.add('hidden');
-pompoenenImg.classList.add('hidden');
+if (window.location.pathname === '/index.html') {
+    pompoenImg.classList.add('hidden');
+    pompoenenImg.classList.add('hidden');
+}
 
 fallThemeButton.addEventListener('click', function() {
     root.classList.toggle('fallTheme');
@@ -169,7 +171,14 @@ fallThemeButton.addEventListener('click', function() {
     }
 });
 
-
+// console.log(window.location.pathname);
+// if (window.location.pathname === '/theepot.html') {
+//     function countingItems() {
+//         count = count + 1;
+//         aantalWinkelmandje.innerHTML = count;
+//     }
+//     winkelmandjeButton.addEventListener('click', countingItems);
+// }
 
 
 
@@ -299,7 +308,6 @@ let winkelmandjeButton = document.querySelector('.backgroundTheepot > ul:first-o
 let aantalWinkelmandje = document.querySelector('nav > p:first-of-type');
 let count = 0;
 
-console.log(window.location.pathname);
 if (window.location.pathname === '/theepot.html') {
     function countingItems() {
         count = count + 1;
@@ -324,7 +332,6 @@ let productinformatie = document.querySelectorAll('.theepotDropdown li p');
 let specificaties = document.querySelectorAll('.theepotDropdown li div ul');
 
 
-console.log(window.location.pathname);
 if (window.location.pathname === '/theepot.html') {
     // productinformatie.classList.add('hidden');
 
