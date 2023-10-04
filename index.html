@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<title>Dille & Kamille</title>
-	
+
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 
 <body>
 	<header>
-		<a class="skip-link" href="#mainContent">Skip to main content</a>
+		<a href="#mainContent">Skip to main content</a>
 
 		<div>
 			<img src="images/iconCheck2.svg" alt="Check icon">
@@ -116,18 +116,14 @@
 			<button>
 				<img src="images/iconSearch2.png" alt="Search button">
 			</button>
-			<input
-			type="search" 
-			name="q" 
-			placeholder="Waar ben je naar op zoek?" 
-			maxlength="30" 
-			aria-label="Search through site content">
+			<input type="search" name="q" placeholder="Waar ben je naar op zoek?" maxlength="30"
+				aria-label="Search through site content">
 		</div>
 		<!-- <input type="search”>:
 		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search  -->
 
 
-		
+
 		<div class="landingspagina">
 			<p>Wijsheden uit de natuur</p>
 			<h1>Herfst bij Dille</h1>
@@ -139,34 +135,34 @@
 	<main id="mainContent">
 		<section>
 			<h2>Categoriën</h2>
-				<a href="rietenManden.html">
-					<article>
-						<img src="images/rietenManden.jpg" alt="Rieten manden">
-						<h3>Rieten manden</h3>
-						<p>Bekijk hier</p>
-					</article>
-				</a>
-				<a href="badEnDouche.html">
-					<article>
-						<img src="images/badEnDouche.jpg" alt="Bad & douche">
-						<h3>Bad & douche</h3>
-						<p>Bekijk hier</p>
-					</article>
-				</a>
-				<a href="tafelkleden.html">
-					<article>
-						<img src="images/Tafelkleden.jpg" alt="Tafelkleden">
-						<h3>Tafelkleden</h3>
-						<p>Bekijk hier</p>
-					</article>
-				</a>
-				<a href="thee.html">
-					<article>
-						<img src="images/thee.jpg" alt="Thee">
-						<h3>Thee</h3>
-						<p>Bekijk hier</p>
-					</article>
-				</a>
+			<a class="hiddenAnimation" href="rietenManden.html">
+				<article>
+					<img src="images/rietenManden.jpg" alt="Rieten manden">
+					<h3>Rieten manden</h3>
+					<p>Bekijk hier</p>
+				</article>
+			</a>
+			<a class="hiddenAnimation" href="badEnDouche.html">
+				<article>
+					<img src="images/badEnDouche.jpg" alt="Bad & douche">
+					<h3>Bad & douche</h3>
+					<p>Bekijk hier</p>
+				</article>
+			</a>
+			<a class="hiddenAnimation" href="tafelkleden.html">
+				<article>
+					<img src="images/Tafelkleden.jpg" alt="Tafelkleden">
+					<h3>Tafelkleden</h3>
+					<p>Bekijk hier</p>
+				</article>
+			</a>
+			<a class="hiddenAnimation" href="thee.html">
+				<article>
+					<img src="images/thee.jpg" alt="Thee">
+					<h3>Thee</h3>
+					<p>Bekijk hier</p>
+				</article>
+			</a>
 		</section>
 
 		<section class="krachtigeKruiden">
@@ -181,7 +177,7 @@
 					<img src="images/iconArrow3.svg" alt="Arrow">
 				</button>
 			</div>
-			<ul class="hiddenAnimation">
+			<ul>
 				<li>
 					<a href="wiegemes.html">
 						<article>
@@ -212,7 +208,8 @@
 				<li>
 					<a href="kruidenpotjeMetStrooideksel.html">
 						<article>
-							<img src="images/kruidenpotjeMetStrooideksel.jpg" alt="Kruidenpotje met strooideksel, glas, 90 ml">
+							<img src="images/kruidenpotjeMetStrooideksel.jpg"
+								alt="Kruidenpotje met strooideksel, glas, 90 ml">
 							<h3>Kruidenpotje met strooideksel, 90 ml</h3>
 							<p>1,75</p>
 						</article>
@@ -229,7 +226,7 @@
 				</li>
 			</ul>
 
-			<img src="images/kokenMetKrachtigeKruiden.jpg" alt="Koken met krachtige kruiden">
+			<img src="images/kokenMetKrachtigeKruiden.jpg" alt="">
 		</section>
 
 		<section>
@@ -237,27 +234,30 @@
 				<h2>Tips & inspiratie</h2>
 				<a href="tipsEnInspiratie">Bekijk alles</a>
 			</div>
-			<article>
+			<article class="slideAnimation">
 				<img src="images/theeElkMoment.jpg" alt="Een thee voor elk moment van de dag">
 				<h3>Thuis bij Dille</h3>
 				<h4>Een thee voor elk moment van de dag</h4>
-				<p>Bij Dille & Kamille vind je heel veel soorten thee, voor elk moment van je dag. Hieronder tippen wij onze favoriete thee, van &rsquo;s ochtends vroeg tot &rsquo;s avonds laat. </p>
+				<p>Bij Dille & Kamille vind je heel veel soorten thee, voor elk moment van je dag. Hieronder tippen wij
+					onze favoriete thee, van &rsquo;s ochtends vroeg tot &rsquo;s avonds laat. </p>
 			</article>
-			<article>
+			<article class="slideAnimation">
 				<img src="images/madeleines.jpg" alt="Een thee voor elk moment van de dag">
 				<h3>Recept</h3>
 				<h4>Feestelijke madeleines</h4>
-				<p>Madeleines zijn schelpvormige cakejes, afkomstig uit Frankrijk. Met dit recept maak je twee feestelijke soorten: met vijfkruidenpoeder en met vanille-extract en pistachecrème.</p>
+				<p>Madeleines zijn schelpvormige cakejes, afkomstig uit Frankrijk. Met dit recept maak je twee
+					feestelijke soorten: met vijfkruidenpoeder en met vanille-extract en pistachecrème.</p>
 			</article>
-			<article>
+			<article class="slideAnimation">
 				<img src="images/vanillePastaVanilleExtract.jpg" alt="Een thee voor elk moment van de dag">
 				<h3>In de keuken van Dille</h3>
 				<h4>Wat is het verschil tussen vanille extract en vanillepasta?</h4>
-				<p>Vanille is een dankbaar ingrediënt in gebak, drankjes en desserts. Vanille extract en vanillepasta komen in verschillende typen gerechten het best tot hun recht.</p>
+				<p>Vanille is een dankbaar ingrediënt in gebak, drankjes en desserts. Vanille extract en vanillepasta
+					komen in verschillende typen gerechten het best tot hun recht.</p>
 			</article>
 		</section>
 
-		<section>
+		<section class="hiddenAnimation">
 			<h3>Instagram</h3>
 			<p>Een kijkje bij jou in huis #dillekamille</p>
 			<ul>
@@ -306,38 +306,43 @@
 		<ul>
 			<li>
 				<ul>
-                    <li>
+					<li>
 						<button>
 							<img src="images/darkmode.png" alt="Darkmode on">
 						</button>
-                    </li>
-                    <li>
+					</li>
+					<li>
 						<button>
 							<img src="images/fallThemeOn.png" alt="Fall theme">
 						</button>
-                    </li>
-                    <li>
+					</li>
+					<li>
 						<button>
 							<img src="images/fontSize.png" alt="Font size">
 						</button>
-                    </li>
-                </ul>
-                <button>
-                    <img src="images/settings.gif" alt="Klantenservice">
-                </button>
-            </li>
-            <li>
-                <button>
-                    <img src="images/klantenservice.png" alt="Klantenservice">
-                </button>
-            </li>
-            
+					</li>
+					<li>
+						<button>
+							<img src="images/soundOn.png" alt="Calming sound">
+						</button>
+					</li>
+				</ul>
+				<button>
+					<img src="images/settings.gif" alt="Klantenservice">
+				</button>
+			</li>
+			<li>
+				<button>
+					<img src="images/klantenservice.png" alt="Klantenservice">
+				</button>
+			</li>
+
 		</ul>
 
 	</main>
 
 	<footer>
-		<article>
+		<article class="slideAnimation">
 			<img src="images/memberBoeket.webp" alt="Bloemenboeket">
 
 			<h2>Word member van Dille & Kamille en ontvang:</h2>
@@ -353,15 +358,16 @@
 		<section>
 			<img src="images/dilleKamilleWinkel.jpg" alt="Dille & Kamille winkel">
 
-			<div>
+			<div class="hiddenAnimation">
 				<h3>Altijd in de buurt</h3>
 				<a href="winkels.html">Bekijk alle 45 winkels</a>
 			</div>
 		</section>
-			
+
 		<section>
 			<h2>Klantenservice</h2>
-			<p>Voor vragen, tips of hulp kun je contact opnemen met onze klantenservice. Of bekijk hier het antwoord op de <a href="meestgesteldeVragen.html">meestgestelde vragen</a>.</p>
+			<p>Voor vragen, tips of hulp kun je contact opnemen met onze klantenservice. Of bekijk hier het antwoord op
+				de <a href="meestgesteldeVragen.html">meestgestelde vragen</a>.</p>
 
 			<div>
 				<img src="images/iconMail.png" alt="Mail icon">
@@ -378,13 +384,13 @@
 
 		<section>
 			<h2>Gegevens</h2>
-			<div>
+			<div class="hiddenAnimation">
 				<img src="images/logo.svg" alt="Logo Dille & Kamille">
 				<p>Beoordeling 4.64 van 5 door 10731 klanten</p>
 			</div>
 
 			<p>Alle genoemde prijzen zijn consumentenprijzen en incclusief BTW.</p>
-			
+
 			<ul>
 				<li>
 					<button>
@@ -468,10 +474,10 @@
 					</ul>
 				</li>
 			</ul>
-			
 
 
-			
+
+
 			<button>
 				<img src="images/flagNederland.png" alt="Flag nederland">
 				<span>NL</span>
@@ -570,7 +576,7 @@
 				</li>
 			</ul>
 
-			<ul>
+			<ul class="hiddenAnimation">
 				<li>
 					<img src="images/certifiedCorporation.png" alt="Certified Corporation">
 				</li>
@@ -600,10 +606,10 @@
 				</button>
 			</li>
 		</ul>
-		
+
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>
-	
+
 </html>

@@ -83,6 +83,14 @@ let fallThemeImg = document.querySelector('main > ul:last-of-type li:first-of-ty
 let fontSizeButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button');
 let fontSizeImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(3) button img');
 
+let soundButton = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(4) button'); 
+const soundImg = document.querySelector('main > ul:last-of-type li:first-of-type ul li:nth-of-type(4) button img'); 
+const audio = new Audio('sounds/riverForest.mp3');
+audio.loop = true;
+let buttons = document.querySelectorAll('button');
+let links = document.querySelectorAll('a');
+
+
 
 settingsUl.classList.add('hidden');
 
@@ -127,6 +135,48 @@ fontSizeButton.addEventListener('click', function() {
         fontSizeImg.src= "images/fontSize.png";
     }
 });
+
+// sound
+
+function playsound() {
+    if (soundImg.src.includes("soundOn.png")) {
+        function riverForest() {
+            audio.play();
+        }
+        riverForest();
+
+        soundImg.src = "images/soundOff.png";
+    } else {
+        audio.pause();
+        soundImg.src = "images/soundOn.png";
+    }
+}
+soundButton.addEventListener('click', playsound);
+
+
+
+// sound button
+function buttonSound() {
+    const audio = new Audio('sounds/buttonSound.mp3');
+    audio.play();
+}
+
+buttons.forEach(function(button) {
+    button.addEventListener('click', buttonSound);
+});
+
+
+// function linkSound() {
+//     const audio = new Audio('sounds/buttonSound.mp3');
+//     audio.play();
+// }
+
+// links.forEach(function(a) {
+//     a.addEventListener('click', linkSound);
+// });
+
+
+
 
 
 
@@ -403,15 +453,42 @@ if (languageDropdownUl) {
 
 // scroll animation
 
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('show');
-//         } else {
-//             entry.target.classList.remove('show');
-//         }
-//     });
-// });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
 
-// const hiddenElements = document.querySelectorAll('.hiddenAnimation');
-// hiddenElements.forEach((el) => observer.observe(el));
+const elementsToObserve = document.querySelectorAll('.hiddenAnimation');
+elementsToObserve.forEach((element) => {
+    observer.observe(element);
+});
+const elementsToObserve2 = document.querySelectorAll('.slideAnimation');
+elementsToObserve2.forEach((element) => {
+    observer.observe(element);
+});
+
+
+// const faders = document.querySelectorAll('.hiddenAnimation');
+// const appearOptions = {
+//     threshold: 1
+// };
+
+// const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) {
+//             return;
+//         } else {
+//             entry.target.classList.add('appear');
+//             appearOnScroll.unobserve(entry.target);
+//         }
+//     })
+// }, appearoptions);
+
+// faders.forEach(fader => {
+//     appearOnScroll.observe(fader);
+// })
