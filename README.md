@@ -247,6 +247,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Sommige img zien er anders uit in de Safari browser, op Brave en Chrome werkt het wel precies zoals ik wil, op Safari support het iets niet.
   <img src="readme-images/safariScreenshot.png" width="375px" alt="Website op Safari">
+
+In mijn Javascript heb ik twee img geselecteerd die alleen op de index.html staan. Om errors te voorkomen heb ik het volgende in mijn js geplaatst:
+ if (window.location.pathname === '/index.html' || window.location.pathname === '/')
+Dit wil echter niet altijd werken.
+  <img src="readme-images/windowScreenshot.png" width="375px" alt="Website op Safari">
 </details>
 
 
