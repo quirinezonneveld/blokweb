@@ -233,14 +233,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
+  Dit is een full-screenshot van de twee pagina's, ze zien er anders uit dan wanneer je de website zelf bekijkt door de scroll-animations.
   <img src="readme-images/eindresultaatHomepage.png" width="375px" alt="Eindresultaat homepage">
 <img src="readme-images/eindresultaatDetailpagina.png" width="375px" alt="Eindresultaat homepage">
 
   ### Dit ging goed/Heb ik geleerd: 
   Ik heb geleerd hoe ik de root kan inzetten om gemakkelijk kleuren, font-size enz. aan te passen. Ook heb ik dit gebruikt in de darklight-mode, het herfst thema en bij het vergroten van de lettertypes.
 
-  <img src="darklightmodeScreenshot.png" width="375px" alt="Darklight-mode">
-  <img src="herfstthemaScreenshot.png" width="375px" alt="Herfst thema">
+  <img src="readme-images/darklightmodeScreenshot.png" width="375px" alt="Darklight-mode">
+  <img src="readme-images/herfstthemaScreenshot.png" width="375px" alt="Herfst thema">
 
 
   ### Dit was lastig/Is niet gelukt:
