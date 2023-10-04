@@ -289,11 +289,16 @@ let winkelmandjeButton = document.querySelector('.backgroundTheepot > ul:first-o
 let aantalWinkelmandje = document.querySelector('nav > p:first-of-type');
 let count = 0;
 
-function countingItems() {
-    count = count + 1;
-    aantalWinkelmandje.innerHTML = count;
+console.log(window.location.pathname);
+if (window.location.pathname === '/theepot.html') {
+    function countingItems() {
+        count = count + 1;
+        aantalWinkelmandje.innerHTML = count;
+    }
+    winkelmandjeButton.addEventListener('click', countingItems);
 }
-winkelmandjeButton.addEventListener('click', countingItems);
+/* count button clicks:
+https://youtu.be/Fh35DD6jam4?si=NJtl084Y-aYJ05Ip */
 
 
 

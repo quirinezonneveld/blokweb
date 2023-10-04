@@ -284,5 +284,5 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   22. skip to main content: https://www.youtube.com/watch?v=287mLmuamoM https://www.youtube.com/watch?v=jDDaOFr9nqQ 
   23. scroll-animation: https://www.youtube.com/watch?v=huVJW23JHKQ https://youtu.be/huVJW23JHKQ?si=iJcgi2joHmCez_Jo 
   24. loading-state: https://youtu.be/VbAD6cifkWM?si=8Ksq2coWmzMVNXvg https://youtu.be/q76TexbMXJg?si=vlp8dG1rG1nBCQAv
-
+  25. count button clicks: https://youtu.be/Fh35DD6jam4?si=NJtl084Y-aYJ05Ip 
 </details>
