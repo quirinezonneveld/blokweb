@@ -148,7 +148,7 @@ for (let i = 0; i < fallAnimations.length; i++) {
 }
 // Loopt door de gevonden elementen en voegt "hidden" toe
 
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
     pompoenImg.classList.add('hidden');
     pompoenenImg.classList.add('hidden');
 }
